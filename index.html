@@ -82,7 +82,12 @@
           <div class="card">
             <h3>Personal Blog</h3>
             <p>Checkout my blog about my journey on web developmet</p>
-            <a href="" class="link" target="_blank">Visit Blog</a>
+            <a
+              href="https://doedoe123-boop.github.io"
+              class="link"
+              target="_blank"
+              >Visit Blog</a
+            >
           </div>
           <div class="card">
             <h3>Laravel API</h3>
@@ -107,10 +112,10 @@
           message!
         </p>
         <form
+          id="contact-form"
           class="contact-form"
-          action="mailto:asum.nelson@gmail.com"
+          action="https://formspree.io/f/mqaklzwn"
           method="POST"
-          enctype="text/plain"
         >
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="email" placeholder="Your email" required />
@@ -123,6 +128,7 @@
             required
           ></textarea>
           <button type="submit">Send Message</button>
+          <p id="my-form-status"></p>
         </form>
       </div>
     </section>
@@ -138,6 +144,7 @@
         <a href="mailto:asum.nelson@gmail.com">Email</a>
       </div>
     </footer>
-    <script src="scrolldown.js"></script>
+    <script src="js/formAjax.js"></script>
+    <script src="js/scrolldown.js"></script>
   </body>
 </html>
