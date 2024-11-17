@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Charset and Compatibility -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the Webpage -->
+    <title>Portfolio</title>
+
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon (if you have one) -->
+    <link rel="icon" href="svg/logo.svg" type="image/x-icon" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Welcome to my personal portfolio showcasing web development projects and more."
+    />
+    <meta
+      name="keywords"
+      content="web development, portfolio, HTML, CSS, JavaScript, PHP, Laravel, React, Node.js, NGINX, AWS, Linux"
+    />
+    <meta name="author" content="Nelson Asumbrado" />
+
+    <!-- Open Graph Meta Tags for Facebook & LinkedIn -->
+    <meta
+      property="og:title"
+      content="Nelson Asumbrado - Web Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore my web development portfolio, including projects with Laravel, React, and more."
+    />
+    <meta property="og:image" content="path/to/your-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nelson Asumbrado Portfolio" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Nelson Asumbrado - Web Developer Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore my web development portfolio, including projects with Laravel, React, and more."
+    />
+    <meta name="twitter:image" content="path/to/your-image.jpg" />
+    <meta name="twitter:url" content="https://yourwebsite.com" />
+
+    <!-- Canonical Link (if applicable) -->
+    <link rel="canonical" href="https://yourwebsite.com" />
+
+    <!-- Additional Meta Tags (if needed) -->
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="header">
+        <div class="container">
+          <h3>Hey there!</h3>
+          <h1>Welcome to my Portfolio</h1>
+          <button id="scrollDown">Scroll Down</button>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <div class="content">
+        <h2>Check out some of my projects</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Personal Blog</h3>
+            <p>Checkout my blog about my journey on web developmet</p>
+            <a href="" class="link" target="_blank">Visit Blog</a>
+          </div>
+          <div class="card">
+            <h3>Laravel API</h3>
+            <p>Check my laravel project using NGINX and AWS Server</p>
+            <a href="" class="link" target="_blank">View Project</a>
+          </div>
+          <div class="card">
+            <h3>React Native</h3>
+            <p>
+              Check my react native savings app that records your daily expenses
+            </p>
+            <a href="" class="link" target="_blank">View more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="content">
+        <h2>Get in Touch</h2>
+        <p>
+          if you'd like to work with me or just say hi, feel free to send a
+          message!
+        </p>
+        <form
+          class="contact-form"
+          action="mailto:asum.nelson@gmail.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>© <span id="year"></span> Nelson Asumbrado. All Rights Reserved.</p>
+      <div class="socials">
+        <a href="" target="_blank">Github</a>
+        <a href="" target="_blank">LinkedIn</a>
+        <a href="mailto:asum.nelson@gmail.com">Email</a>
+      </div>
+    </footer>
+    <script src="scrolldown.js"></script>
+  </body>
+</html>
