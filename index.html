@@ -91,9 +91,9 @@
             alt="Your Photo"
             class="about-photo"
           />
-          <div class="about-text">
+          <div class="about-text" id="about">
             <p>
-              Hi! I’m Nelson Asumbrado, a passionate web developer with over 3
+              <span id="intro"></span>, a passionate web developer with over 3
               years of experience in crafting responsive and user-centric
               websites. My expertise includes frameworks like Laravel, React,
               and building efficient APIs.
@@ -270,11 +270,11 @@
       <div class="content">
         <h2>Check out some of my projects</h2>
         <div class="card-grid">
-          <div class="card">
+          <div class="card" >
             <h3>Personal Blog</h3>
             <p>Checkout my blog about my journey on web developmet</p>
             <a
-              href="https://doedoe123-boop.github.io"
+              onclick="openModal('Personal Blog', 'https://doedoe123-boop.github.io')"
               class="link"
               target="_blank"
               >Visit Blog</a
@@ -286,17 +286,17 @@
               Fitness Tracker website for health tips and guide you on your
               wellness journey.
             </p>
-            <a href="https://www.fitnesses.lifestyle" class="link" target="_blank"
+            <a onclick="openModal('Fitness Tracker', 'https://www.fitnesses.lifestyle')" class="link" target="_blank"
               >Visit Website</a
             >
           </div>
           <div class="card">
             <h3>Fitness App</h3>
             <p>
-              Download our app today and start tracking your progress to a
+              Download my app today and start tracking your progress to a
               healthier, fitter lifestyle.
             </p>
-            <a href="#" class="link" target="_blank">Get the App</a>
+            <a onclick="openModal('Fitness App', '', true)" class="link" target="_blank">Get the App</a>
           </div>
         </div>
       </div>
@@ -341,6 +341,18 @@
         <a href="mailto:asum.nelson@gmail.com">Email</a>
       </div>
     </footer>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+        <div class="modal-footer">
+          <button id="visit-site" class="visit-btn">Visit Site</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendor/js/modal.js"></script>
     <script src="assets/vendor/js/animate.js"></script>
     <script src="assets/vendor/js/formAjax.js"></script>
     <script src="assets/vendor/js/scrolldown.js"></script>

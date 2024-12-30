@@ -145,21 +145,6 @@ button:hover {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-.resume-button {
-  background: linear-gradient(90deg, #e66465, #9198e5);
-  padding: 10px 20px;
-  border: none;
-  color: #fff;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.resume-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(150, 150, 255, 0.5);
-}
 .skills-section {
   color: #fff;
   padding: 80px 20px;
@@ -265,7 +250,7 @@ button:hover {
   background: linear-gradient(135deg, #1a1a1a, #333);
   color: #fff;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   text-align: center;
   box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.05);
 }
@@ -423,5 +408,109 @@ button:hover {
   .footer {
     font-size: 0.8rem;
     padding: 15px 0;
+  }
+}
+/* intro */
+@keyframes shine {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+#intro {
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+/* Modal Container */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden; 
+}
+
+/* Modal Content */
+.modal-content {
+  background: #464646;
+  margin: 5% auto; 
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; 
+}
+
+/* Close Button */
+.close {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Iframe Preview */
+iframe {
+  width: 100%;
+  height: 400px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+/* Visit Button */
+.visit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  iframe {
+    height: 550px;
+  }
+
+  .visit-btn {
+    width: 100%; 
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%; 
+    padding: 10px;
+  }
+
+  iframe {
+    height: 500px; 
+  }
+
+  .close {
+    font-size: 24px; 
   }
 }
