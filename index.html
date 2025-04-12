@@ -75,9 +75,26 @@
       <div id="particles-js"></div>
       <div class="hero-content">
         <div class="container">
-          <h3>Hey there!</h3>
-          <h1>Welcome to my Portfolio</h1>
-          <button id="scrollDown">Scroll Down</button>
+          <p class="hero-greeting">Hello World! 👋</p>
+          <h1 class="hero-name">I'm <span class="highlight">Nelson Asumbrado</span></h1>
+          <div class="hero-roles">
+            <span class="role">Full Stack Developer</span>
+            <span class="role-divider">•</span>
+            <span class="role">System Administrator</span>
+          </div>
+          <p class="hero-description">Building and deploying scalable web applications with modern technologies. Specializing in full-stack development and cloud infrastructure.</p>
+          <div class="hero-cta">
+            <button id="view-work" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View My Work</button>
+            <button id="contact-me" class="outline" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">Get in Touch</button>
+          </div>
+          <div class="tech-stack hero-tech">
+            <span>Laravel</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>AWS</span>
+            <span>Linux</span>
+            <span>NGINX</span>
+          </div>
         </div>
       </div>
     </section>
@@ -87,7 +104,7 @@
         <div class="about-wrapper">
           <!-- Photo and Text -->
           <img
-            src="assets/images/me.jpg"
+            src="assets/images/me.png"
             alt="Your Photo"
             class="about-photo"
             width="250"
@@ -95,17 +112,16 @@
           />
           <div class="about-text" id="about">
             <p>
-              <span id="intro"></span>, a passionate web developer with over 2+
-              years of experience in crafting responsive and user-centric
-              websites. My expertise includes frameworks like Laravel, React,
-              and building efficient APIs.
+              <span id="intro"></span>, a Full Stack Developer and System Administrator with over 2+
+              years of experience in building and deploying scalable web applications. My expertise spans
+              across frontend development with React and Vue.js, backend development with Laravel and Node.js,
+              and server management using AWS, Linux, and NGINX.
             </p>
             <p>
-              When I’m not coding, you’ll find me playing Valorant or watching
-              anime. I also enjoy watching *Day in the Life of a Software
-              Engineer* videos, which inspire me to grow in my career. Lately,
-              I’ve been exploring machine learning and AI, and I’m eager to
-              deepen my knowledge in these fascinating fields.
+              I have a strong foundation in both development and operations, allowing me to handle
+              projects from conception to deployment. When I'm not coding or managing servers,
+              you'll find me playing Valorant or watching anime. I'm passionate about staying
+              current with the latest tech trends, especially in cloud computing and DevOps practices.
             </p>
           </div>
         </div>
@@ -205,6 +221,91 @@
                   <li>Confluence</li>
                 </ul>
               </div>
+
+              <!-- Frontend & Backend Development Cards -->
+              <div class="skill-category">
+                <h3>Frontend Development</h3>
+                <div class="skill-item">
+                  <div class="skill-name">HTML/CSS</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="95"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">JavaScript</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">React</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="85"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Vue.js</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="80"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <h3>Backend Development</h3>
+                <div class="skill-item">
+                  <div class="skill-name">PHP/Laravel</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Node.js</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="85"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">MySQL/MariaDB</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="88"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">RESTful APIs</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="92"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <h3>DevOps & System Administration</h3>
+                <div class="skill-item">
+                  <div class="skill-name">Linux/Ubuntu Server</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="88"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">AWS Services</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="85"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">NGINX/Server Setup</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">CI/CD Pipelines</div>
+                  <div class="skill-progress">
+                    <div class="skill-progress-bar" data-percentage="82"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -268,19 +369,25 @@
       </div>
     </section>
 
+    <!-- Projects Section with Tech Stack -->
     <section id="projects" class="projects">
       <div class="content">
         <h2>Check out some of my projects</h2>
         <div class="card-grid">
-          <div class="card" >
+          <div class="card">
             <h3>Personal Blog</h3>
-            <p>Checkout my blog about my journey on web developmet</p>
+            <p>Checkout my blog about my journey on web development</p>
+            <div class="tech-stack">
+              <span>Hugo</span>
+              <span>Go Templates</span>
+              <span>SCSS</span>
+              <span>Markdown</span>
+            </div>
             <a
               onclick="openModal('Personal Blog', 'https://doedoe123-boop.github.io')"
               class="link"
               target="_blank"
-              >Visit Blog</a
-            >
+              >Visit Blog</a>
           </div>
           <div class="card">
             <h3>Fitness Tracker</h3>
@@ -288,9 +395,14 @@
               Fitness Tracker website for health tips and guide you on your
               wellness journey.
             </p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+            </div>
             <a onclick="openModal('Fitness Tracker', 'https://www.fitnesses.lifestyle')" class="link" target="_blank"
-              >Visit Website</a
-            >
+              >Visit Website</a>
           </div>
           <div class="card">
             <h3>Fitness App</h3>
@@ -298,11 +410,75 @@
               Download my app today and start tracking your progress to a
               healthier, fitter lifestyle.
             </p>
+            <div class="tech-stack">
+              <span>React Native</span>
+              <span>Firebase</span>
+              <span>Node.js</span>
+              <span>Express</span>
+            </div>
             <a onclick="openModal('Fitness App', '', true)" class="link" target="_blank">Get the App</a>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="testimonials">
+      <div class="container" style="margin-bottom: 40px;">
+        <h2 class="scroll-animate">What People Say</h2>
+      </div>
+      <div class="testimonial-slider">
+        <div class="testimonial-track">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "I highly recommend Nelson as an exceptional web developer and teammate. He's always reliable whenever I need assistance or have questions and consistently showcases his deep understanding of web development."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4 class="author-name">Angeluz Nicole P.</h4>
+                <p class="author-title">Web Developer | QA</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "We've worked on several projects, both local and international, and Nelson consistently meets client expectations. His passion for development and continuous learning makes him a valuable asset to any team."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4 class="author-name">Alexis B.</h4>
+                <p class="author-title">Marketing Assistant</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "I worked with Nelson on a couple of website development projects in our team, and the results are exceptional. Nelson is skilled, and I commend him for ensuring that each detail of every project's vision is executed perfectly. He works with professionalism and makes sure that any problems are communicated clearly, and he lays out solutions that may work to solve it."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4 class="author-name">Leanne Danielle M.</h4>
+                <p class="author-title">Marketing Assistant</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              "Nelson is a talented web developer who's great to work with. He knows his stuff when it comes to modern web technologies and always gets the job done efficiently."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4 class="author-name">Veronica G.</h4>
+                <p class="author-title">Content Writer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contact">
       <div class="content">
         <h2>Get in Touch</h2>
@@ -356,6 +532,7 @@
     </div>
     <script src="assets/vendor/js/modal.js"></script>
     <script src="assets/vendor/js/animate.js"></script>
+    <script src="assets/vendor/js/carousel.js"></script>
     <script src="assets/vendor/js/formAjax.js"></script>
     <script src="assets/vendor/js/scrolldown.js"></script>
   </body>
