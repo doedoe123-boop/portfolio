@@ -1,0 +1,18 @@
+{
+  "name": "Nelson Asumbrado Portfolio",
+  "short_name": "Nelson Dev",
+  "description": "Full Stack Developer and System Administrator portfolio showcasing web development projects and cloud solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/vendor/svg/logo.svg",
+      "sizes": "72x72 96x96 128x128 256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

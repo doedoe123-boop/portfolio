@@ -4,61 +4,59 @@
     <!-- Meta Charset and Compatibility -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light">
+    <meta name="format-detection" content="telephone=no">
 
     <!-- Title of the Webpage -->
     <title>Nelson Asumbrado | Portfolio</title>
 
     <!-- Link to External Stylesheet -->
-    <link rel="stylesheet" href="assets/vendor/css/style.css" />
+    <link rel="stylesheet" href="assets/vendor/css/style.min.css" />
 
     <!-- Favicon (if you have one) -->
     <link rel="icon" href="assets/vendor/svg/logo.svg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/vendor/svg/logo.svg">
 
     <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Welcome to my personal portfolio showcasing web development projects and more."
-    />
-    <meta
-      name="keywords"
-      content="web development, portfolio, HTML, CSS, JavaScript, PHP, Laravel, React, Node.js, NGINX, AWS, Linux"
-    />
+    <meta name="description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions." />
+    <meta name="keywords" content="web development, portfolio, HTML, CSS, JavaScript, PHP, Laravel, React, Node.js, NGINX, AWS, Linux, Full Stack Developer, Server Administrator" />
     <meta name="author" content="Nelson Asumbrado" />
+    <meta name="language" content="Filipino">
+    <meta name="revisit-after" content="7 days">
 
     <!-- Open Graph Meta Tags for Facebook & LinkedIn -->
-    <meta
-      property="og:title"
-      content="Nelson Asumbrado - Web Developer Portfolio"
-    />
-    <meta
-      property="og:description"
-      content="Explore my web development portfolio, including projects with Laravel, React, and more."
-    />
-    <meta property="og:image" content="assets/images/portfolio.web" />
-    <meta property="og:url" content="https://nelson-dev.vercel.app" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Nelson Asumbrado Portfolio" />
+    <meta property="og:title" content="Nelson Asumbrado - Full Stack Developer & Server Administrator" />
+    <meta property="og:description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions." />
+    <meta property="og:image" content="https://nelson-dev.vercel.app/assets/images/portfolio.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://nelson-dev.vercel.app" />
+    <meta property="og:locale" content="en_PH" />
 
-    <!-- Twitter Card Meta Tags -->
+<!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Nelson Asumbrado - Web Developer Portfolio"
-    />
-    <meta
-      name="twitter:description"
-      content="Explore my web development portfolio, including projects with Laravel, React, and more."
-    />
-    <meta name="twitter:image" content="assets/images/portfolio.web" />
-    <meta name="twitter:url" content="https://nelson-dev.vercel.app" />
+    <meta name="twitter:title" content="Nelson Asumbrado - Full Stack Developer & Server Administrator" />
+    <meta name="twitter:description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions." />
+    <meta name="twitter:image" content="https://nelson-dev.vercel.app/assets/images/portfolio.webp" />
+    <meta name="twitter:image:alt" content="Nelson Asumbrado's Portfolio Preview" />
 
-    <!-- Canonical Link (if applicable) -->
+    <!-- Canonical Link -->
     <link rel="canonical" href="https://nelson-dev.vercel.app" />
 
-    <!-- Additional Meta Tags (if needed) -->
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#000000" />
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e293b" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="google" content="notranslate">
+    
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
@@ -80,7 +78,7 @@
           <div class="hero-roles">
             <span class="role">Full Stack Developer</span>
             <span class="role-divider">•</span>
-            <span class="role">System Administrator</span>
+            <span class="role">Server Administrator</span>
           </div>
           <p class="hero-description">Building and deploying scalable web applications with modern technologies. Specializing in full-stack development and cloud infrastructure.</p>
           <div class="hero-cta">
@@ -112,7 +110,7 @@
           />
           <div class="about-text" id="about">
             <p>
-              <span id="intro"></span>, a Full Stack Developer and System Administrator with over 2+
+              <span id="intro"></span>, a Full Stack Developer and Server Administrator with over 2+
               years of experience in building and deploying scalable web applications. My expertise spans
               across frontend development with React and Vue.js, backend development with Laravel and Node.js,
               and server management using AWS, Linux, and NGINX.
@@ -280,7 +278,7 @@
               </div>
 
               <div class="skill-category">
-                <h3>DevOps & System Administration</h3>
+                <h3>DevOps & Server Administration</h3>
                 <div class="skill-item">
                   <div class="skill-name">Linux/Ubuntu Server</div>
                   <div class="skill-progress">
@@ -490,10 +488,25 @@
           id="contact-form"
           class="contact-form"
           action="https://formspree.io/f/mqaklzwn"
-          method="POST"
+          method="POST"        
         >
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Your email" required />
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Your name" 
+            required 
+            pattern="[A-Za-z ]{2,50}"
+            title="Name should be between 2 and 50 characters and contain only letters"
+            maxlength="50"
+          />
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Your email" 
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"
+          />
           <textarea
             name="message"
             id="message"
@@ -501,8 +514,10 @@
             rows="10"
             placeholder="Your Message"
             required
+            minlength="10"
+            maxlength="1000"
           ></textarea>
-          <button type="submit">Send Message</button>
+            <button type="submit" id="submit-button">Send Message</button>
           <p id="my-form-status"></p>
         </form>
       </div>
@@ -530,6 +545,9 @@
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
     <script src="assets/vendor/js/modal.js"></script>
     <script src="assets/vendor/js/animate.js"></script>
     <script src="assets/vendor/js/carousel.js"></script>
