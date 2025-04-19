@@ -541,6 +541,13 @@ button:hover {
     margin-bottom: 70px;
   }
 }
+
+@media (max-width: 1400px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+  }
+}
 @media (max-width: 768px) {
   .projects h2,
   h1,
@@ -600,14 +607,10 @@ button:hover {
     font-size: 0.8rem;
     padding: 4px 10px;
   }
-  .card {
-    min-width: 280px;
-  }
 }
-@media (max-width: 1400px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
+@media (max-width: 320px) {
+  .card {
+    min-width: 220px;
   }
 }
 /* intro */
