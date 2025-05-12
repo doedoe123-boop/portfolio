@@ -662,16 +662,6 @@ button:hover {
   color: #e0e0e0;
 }
 
-.coming-soon-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #6366f1, #8b5cf6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: pulse 2s infinite;
-}
-
 .coming-soon-title {
   font-size: 2rem;
   margin-bottom: 15px;
@@ -1602,10 +1592,6 @@ button.outline:hover {
 .coming-soon-icon {
   font-size: 64px;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, #6366f1, #8b5cf6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   animation: bounce 2s infinite;
 }
 

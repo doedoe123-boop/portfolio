@@ -20,29 +20,31 @@ function showModal(title, url, comingSoon = false) {
     // Calculate launch date (3 months from now)
     const launchDate = new Date();
     launchDate.setMonth(launchDate.getMonth() + 3);
-    
-    modalTitle.innerHTML = `
+      modalTitle.innerHTML = `
       <div class="coming-soon-content">
-        <div class="coming-soon-icon">🚀</div>
+        <div class="coming-soon-icon">💼</div>
         <h3 class="coming-soon-title">${title}</h3>
 
         <p class="coming-soon-description">
-          Your ultimate fitness companion is almost here! Our app is in its final stages of development,
-          bringing you a revolutionary fitness experience powered by cutting-edge technology.
+          Get ready for a smarter way to manage your business quotations! Planify is in its final stages 
+          of development, bringing you a comprehensive SaaS platform for streamlined quote management.
         </p>
-        
-        <div class="coming-soon-features">
+          <div class="coming-soon-features">
           <div class="feature-item">
-            <span class="feature-icon">💪</span>
-            <span class="feature-tag">AI-Powered Workout Plans</span>
+            <span class="feature-icon">📄</span>
+            <span class="feature-tag">Professional Quote Templates</span>
           </div>
           <div class="feature-item">
-            <span class="feature-icon">📊</span>
-            <span class="feature-tag">Real-time Progress Tracking</span>
+            <span class="feature-icon">🎨</span>
+            <span class="feature-tag">Project Template</span>
           </div>
           <div class="feature-item">
-            <span class="feature-icon">🥗</span>
-            <span class="feature-tag">Personalized Nutrition Guide</span>
+            <span class="feature-icon">👥</span>
+            <span class="feature-tag">Client & Proposal Management</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">💾</span>
+            <span class="feature-tag">PDF Export</span>
           </div>
         </div>
       </div>
@@ -90,16 +92,16 @@ function handleEarlyAccessSubmit(event) {
   const email = document.getElementById('early-access-email').value;
   
   // Pre-fill contact form
-  const messageArea = document.getElementById('message');
-  messageArea.value = `Hi Nelson!
+  const messageArea = document.getElementById('message');  messageArea.value = `Hi Nelson!
 
-I'd like to sign up for early access to the fitness app. 
+I'd like to sign up for early access to Planify. 
 My email: ${email}
 
-I'm excited to try out the following features:
-- AI-Powered Workout Plans
-- Real-time Progress Tracking
-- Integration with Wearables
+I'm interested in the following features:
+- Professional Quote Templates
+- Digital Signature Integration
+- Client & Proposal Management
+- PDF Export & Storage
 
 Please keep me updated on the development progress!`;
 
