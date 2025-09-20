@@ -63,9 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showNotification('Please enter a valid email address', 'error');
                 return;
             }
-
-            // Here you would typically send this to your backend
-            // For demo, we'll just show a success message
+            
             showNotification('Thank you for your interest! We\'ll notify you when we launch.', 'success');
             this.reset();
         });

@@ -4,72 +4,153 @@
     <!-- Meta Charset and Compatibility -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
- 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light">
-    <meta name="format-detection" content="telephone=no">
+    <meta name="color-scheme" content="dark light" />
+    <meta name="format-detection" content="telephone=no" />
 
     <!-- Title of the Webpage -->
     <title>Nelson Asumbrado | Portfolio</title>
 
     <!-- Link to External Stylesheet -->
-    <link rel="stylesheet" href="assets/vendor/css/style.min.css" />
+    <link rel="stylesheet" href="assets/vendor/css/style.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Favicon (if you have one) -->
+    <!-- Favicon -->
     <link rel="icon" href="assets/vendor/svg/logo.svg" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets/vendor/svg/logo.svg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/vendor/css/style.min.css" as="style">
+    <link rel="preload" href="assets/images/me.png" as="image" type="image/webp">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions." />
-    <meta name="keywords" content="web development, portfolio, HTML, CSS, JavaScript, PHP, Laravel, React, Node.js, NGINX, AWS, Linux, Full Stack Developer, Server Administrator" />
+    <meta
+      name="description"
+      content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions."
+    />
+    <meta
+      name="keywords"
+      content="web development, portfolio, HTML, CSS, JavaScript, PHP, Laravel, React, Node.js, NGINX, AWS, Linux, Full Stack Developer, Server Administrator"
+    />
     <meta name="author" content="Nelson Asumbrado" />
-    <meta name="language" content="Filipino">
-    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="Filipino" />
+    <meta name="revisit-after" content="7 days" />
 
     <!-- Open Graph Meta Tags for Facebook & LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Nelson Asumbrado Portfolio" />
-    <meta property="og:title" content="Nelson Asumbrado - Full Stack Developer & Server Administrator" />
-    <meta property="og:description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions." />
-    <meta property="og:image" content="https://nelson-dev.vercel.app/assets/images/portfolio.webp" />
+    <meta
+      property="og:title"
+      content="Nelson Asumbrado - Full Stack Developer & Server Administrator"
+    />
+    <meta
+      property="og:description"
+      content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions."
+    />
+    <meta
+      property="og:image"
+      content="https://nelson-dev.vercel.app/assets/images/portfolio.webp"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://nelson-dev.vercel.app" />
     <meta property="og:locale" content="en_PH" />
 
-<!-- Twitter Card Meta Tags -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nelson Asumbrado - Full Stack Developer & Server Administrator" />
-    <meta name="twitter:description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions." />
-    <meta name="twitter:image" content="https://nelson-dev.vercel.app/assets/images/portfolio.webp" />
-    <meta name="twitter:image:alt" content="Nelson Asumbrado's Portfolio Preview" />
+    <meta
+      name="twitter:title"
+      content="Nelson Asumbrado - Full Stack Developer & Server Administrator"
+    />
+    <meta
+      name="twitter:description"
+      content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nelson-dev.vercel.app/assets/images/portfolio.webp"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Nelson Asumbrado's Portfolio Preview"
+    />
 
     <!-- Canonical Link -->
     <link rel="canonical" href="https://nelson-dev.vercel.app" />
 
     <!-- PWA Support -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#1e293b" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
     <!-- Additional Meta Tags -->
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="google" content="notranslate">
-    
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DERXKFMM7P"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta name="google" content="notranslate" />
 
-    gtag('config', 'G-DERXKFMM7P');
-  </script> 
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DERXKFMM7P"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DERXKFMM7P");
+    </script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nelson Asumbrado",
+      "jobTitle": "Full Stack Developer",
+      "url": "https://nelson-dev.vercel.app",
+      "sameAs": [
+        "https://github.com/doedoe123-boop",
+        "https://linkedin.com/in/nelson-asumbrado-3049a2243"
+      ],
+      "knowsAbout": ["Laravel", "React", "AWS", "Node.js", "PHP", "JavaScript", "Vue.js", "MySQL", "Linux"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Philippines"
+      }
+    }
+    </script>
+  </head>
+  
   <body>
-    <section class="hero">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+      <svg class="moon-icon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg>
+    </button>
+    
+    <!-- Hero Section -->
+    <section class="hero section">
       <div id="particles-js"></div>
       <div class="hero-content">
         <div class="container">
@@ -81,11 +162,12 @@
             <span class="role">Server Administrator</span>
           </div>
           <p class="hero-description">Building and deploying scalable web applications with modern technologies. Specializing in full-stack development and cloud infrastructure.</p>
+
           <div class="hero-cta">
-            <button id="view-work" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View My Work</button>
-            <button id="contact-me" class="outline" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">Get in Touch</button>
+            <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View My Work</button>
+            <button class="btn btn-outline" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">Get in Touch</button>
           </div>
-          <div class="tech-stack hero-tech">
+          <div class="tech-stack">
             <span>Laravel</span>
             <span>React</span>
             <span>Node.js</span>
@@ -96,30 +178,41 @@
         </div>
       </div>
     </section>
-    <section id="about" class="about">
-      <div class="content">
-        <h2>About Me</h2>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- About Section -->
+      <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-header">
+           <h2>About Me</h2>
+        </div>
         <div class="about-wrapper">
           <!-- Photo and Text -->
           <img
             src="assets/images/me.png"
-            alt="Your Photo"
+            alt="Nelson Asumbrado, Full Stack Developer, professional headshot"
             class="about-photo"
             width="250"
             height="250"
+            loading="lazy"
           />
-          <div class="about-text" id="about">
+          <div class="about-text">
             <p>
-              <span id="intro"></span>, a Full Stack Developer and Server Administrator with over 2+
-              years of experience in building and deploying scalable web applications. My expertise spans
-              across frontend development with React and Vue.js, backend development with Laravel and Node.js,
-              and server management using AWS, Linux, and NGINX.
+              <span id="intro"></span>, a Full Stack Developer and Server
+              Administrator with over 2+ years of experience in building and
+              deploying scalable web applications. My expertise spans across
+              frontend development with React and Vue.js, backend development
+              with Laravel and Node.js, and server management using AWS, Linux,
+              and NGINX.
             </p>
             <p>
-              I have a strong foundation in both development and operations, allowing me to handle
-              projects from conception to deployment. When I'm not coding or managing servers,
-              you'll find me playing Valorant or watching anime. I'm passionate about staying
-              current with the latest tech trends, especially in cloud computing and DevOps practices.
+              I have a strong foundation in both development and operations,
+              allowing me to handle projects from conception to deployment. When
+              I'm not coding or managing servers, you'll find me playing
+              Valorant or watching anime. I'm passionate about staying current
+              with the latest tech trends, especially in cloud computing and
+              DevOps practices.
             </p>
           </div>
         </div>
@@ -367,68 +460,166 @@
       </div>
     </section>
 
-    <!-- Projects Section with Tech Stack -->
-    <section id="projects" class="projects">
-      <div class="content">
+    <!-- Projects Section with Enhanced Cards -->
+    <section id="projects" class="projects section">
+      <div class="container">
         <h2>Check out some of my projects</h2>
+        
         <div class="card-grid">
-          <div class="card">
-            <h3>Personal Blog</h3>
-            <p>Checkout my blog about my journey on web development</p>
-            <div class="tech-stack">
-              <span>Hugo</span>
-              <span>Go Templates</span>
-              <span>SCSS</span>
-              <span>Markdown</span>
+          <!-- Enhanced Personal Blog Card -->
+          <div class="project-card-enhanced">
+            <div class="project-image">
+               <a href="https://doedoe123-boop.github.io" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/blog-preview.png" alt="Personal Blog Preview" />
+              <div class="project-overlay">
+                <div class="project-stats">
+                  <span class="stat">Hugo</span>
+                  <span class="stat">Fast Loading</span>
+                  <span class="stat">SEO Optimized</span>
+                </div>
+              </div>
+              </a>
             </div>
-            <a
-              onclick="openModal('Personal Blog', 'https://doedoe123-boop.github.io')"
-              class="link"
-              target="_blank"
-              >Visit Blog</a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Personal Blog</h3>
+                <div class="project-status">
+                  <span class="status-badge live">Live</span>
+                </div>
+              </div>
+              <p class="project-description">
+                A static blog built with Hugo showcasing my web development journey, 
+                technical insights, and learning experiences.
+              </p>
+              <div class="tech-stack">
+                <span>Hugo</span>
+                <span>Go Templates</span>
+                <span>SCSS</span>
+                <span>Markdown</span>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <h3>Fitness Tracker</h3>
-            <p>
-              Fitness Tracker website for health tips and guide you on your
-              wellness journey.
-            </p>
-            <div class="tech-stack">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>Nextjs</span>
-              <span>Supabase</span>
+          
+          <!-- Enhanced Fitness Tracker Card -->
+          <div class="project-card-enhanced">
+            <div class="project-image">
+               <a href="https://www.fitnesses.lifestyle" target="_blank" rel="noopener noreferrer">
+         <img src="assets/images/fitness-preview.png" alt="Fitness Tracker Preview" class="project-screenshot" />
+              <div class="project-overlay">
+                <div class="project-stats">
+                  <span class="stat">React</span>
+                  <span class="stat">Real-time Data</span>
+                  <span class="stat">Mobile Ready</span>
+                </div>
+              </div>
+              </a>
             </div>
-            <a onclick="openModal('Fitness Tracker', 'https://www.fitnesses.lifestyle')" class="link" target="_blank"
-              >Visit Website</a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Fitness Tracker</h3>
+                <div class="project-status">
+                  <span class="status-badge live">Live</span>
+                </div>
+              </div>
+              <p class="project-description">
+                A comprehensive fitness tracking application with health tips, 
+                workout plans, and progress monitoring features.
+              </p>
+              <div class="tech-stack">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Next.js</span>
+                <span>Supabase</span>
+              </div>
+            </div>
           </div>
-          <div class="card">
-            <h3>Planify</h3>
-            <p>
-              A modern SaaS platform that streamlines the quotation process for businesses. 
-              Generate professional quotes, manage clients, and handle proposals efficiently.
-            </p>
-            <div class="tech-stack">
-              <span>Laravel</span>
-              <span>AWS</span>
-              <span>Vue.js</span>
-              <span>NGINX</span>
+          
+          <!-- Enhanced Planify Card -->
+          <div class="project-card-enhanced">
+            <div class="project-image">
+              <span>💼 SaaS Platform Preview</span>
+              <div class="project-overlay">
+                <div class="project-stats">
+                  <span class="stat">Laravel</span>
+                  <span class="stat">AWS Hosted</span>
+                  <span class="stat">Coming Soon</span>
+                </div>
+              </div>
             </div>
-            <a onclick="openModal('Planify', '', true)" class="link" target="_blank">Coming soon</a>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Planify</h3>
+                <div class="project-status">
+                  <span class="status-badge development">In Development</span>
+                </div>
+              </div>
+              <p class="project-description">
+                A modern SaaS platform that streamlines the quotation process for businesses. 
+                Generate professional quotes, manage clients, and handle proposals efficiently.
+              </p>
+              <div class="tech-stack">
+                <span>Laravel</span>
+                <span>AWS</span>
+                <span>Vue.js</span>
+                <span>NGINX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal Section -->
+    <section class="terminal-section section">
+      <div class="container">
+        <h2>Command Line Summary</h2>
+        <div class="interactive-terminal">
+          <div class="terminal-header">
+            <div class="terminal-controls"></div>
+            <span class="terminal-title">nelson@portfolio:~$</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">whoami</span>
+            </div>
+            <div class="terminal-output">
+              Nelson Asumbrado - Full Stack Developer<br>
+              Specializing in Laravel, React, and AWS<br>
+              Location: Philippines 🇵🇭
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command">skills --list</span>
+            </div>
+            <div class="terminal-output">
+              Backend: Laravel, Node.js, PHP, MySQL<br>
+              Frontend: React, Vue.js, JavaScript, CSS<br>
+              DevOps: AWS, Linux, NGINX, Docker<br>
+              Tools: Git, Jira, Trello, VS Code
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <input type="text" class="terminal-input" placeholder="Try: help, projects, contact, experience">
+            </div>
+            <div id="terminal-response"></div>
           </div>
         </div>
       </div>
     </section>
 
     <section class="testimonials">
-      <div class="container" style="margin-bottom: 40px;">
+      <div class="container testimonials-header">
         <h2 class="scroll-animate">What People Say</h2>
       </div>
       <div class="testimonial-slider">
         <div class="testimonial-track">
           <div class="testimonial-card">
             <div class="testimonial-content">
-              "I highly recommend Nelson as an exceptional web developer and teammate. He's always reliable whenever I need assistance or have questions and consistently showcases his deep understanding of web development."
+              "I highly recommend Nelson as an exceptional web developer and
+              teammate. He's always reliable whenever I need assistance or have
+              questions and consistently showcases his deep understanding of web
+              development."
             </div>
             <div class="testimonial-author">
               <div class="author-info">
@@ -440,7 +631,10 @@
 
           <div class="testimonial-card">
             <div class="testimonial-content">
-              "We've worked on several projects, both local and international, and Nelson consistently meets client expectations. His passion for development and continuous learning makes him a valuable asset to any team."
+              "We've worked on several projects, both local and international,
+              and Nelson consistently meets client expectations. His passion for
+              development and continuous learning makes him a valuable asset to
+              any team."
             </div>
             <div class="testimonial-author">
               <div class="author-info">
@@ -452,7 +646,12 @@
 
           <div class="testimonial-card">
             <div class="testimonial-content">
-              "I worked with Nelson on a couple of website development projects in our team, and the results are exceptional. Nelson is skilled, and I commend him for ensuring that each detail of every project's vision is executed perfectly. He works with professionalism and makes sure that any problems are communicated clearly, and he lays out solutions that may work to solve it."
+              "I worked with Nelson on a couple of website development projects
+              in our team, and the results are exceptional. Nelson is skilled,
+              and I commend him for ensuring that each detail of every project's
+              vision is executed perfectly. He works with professionalism and
+              makes sure that any problems are communicated clearly, and he lays
+              out solutions that may work to solve it."
             </div>
             <div class="testimonial-author">
               <div class="author-info">
@@ -461,10 +660,12 @@
               </div>
             </div>
           </div>
-          
+
           <div class="testimonial-card">
             <div class="testimonial-content">
-              "Nelson is a talented web developer who's great to work with. He knows his stuff when it comes to modern web technologies and always gets the job done efficiently."
+              "Nelson is a talented web developer who's great to work with. He
+              knows his stuff when it comes to modern web technologies and
+              always gets the job done efficiently."
             </div>
             <div class="testimonial-author">
               <div class="author-info">
@@ -477,81 +678,143 @@
       </div>
     </section>
 
-    <section class="contact">
-      <div class="content">
-        <h2>Get in Touch</h2>
-        <p>
-          if you'd like to work with me or just say hi, feel free to send a
-          message!
-        </p>
-        <form
-          id="contact-form"
-          class="contact-form"
-          action="https://formspree.io/f/mqaklzwn"
-          method="POST"        
-        >
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Your name" 
-            required 
-            pattern="[A-Za-z ]{2,50}"
-            title="Name should be between 2 and 50 characters and contain only letters"
-            maxlength="50"
-          />
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Your email" 
-            required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-            title="Please enter a valid email address"
-          />
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Your Message"
-            required
-            minlength="10"
-            maxlength="1000"
-          ></textarea>
-            <button type="submit" id="submit-button">Send Message</button>
-          <p id="my-form-status"></p>
-        </form>
-      </div>
-    </section>
-    <footer class="footer">
-      <p>© <span id="year"></span> Nelson Asumbrado. All Rights Reserved.</p>
-      <div class="socials">
-        <a href="https://github.com/doedoe123-boop" target="_blank">Github</a>
-        <a
-          href="https://www.linkedin.com/in/nelson-asumbrado-3049a2243"
-          target="_blank"
-          >LinkedIn</a
-        >
-        <a href="mailto:asum.nelson@gmail.com">Email</a>
-      </div>
-    </footer>
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h3 id="modal-title"></h3>
-        <iframe id="modal-iframe" src="" frameborder="0"></iframe>
-        <div class="modal-footer">
-          <button id="visit-site" class="visit-btn">Visit Site</button>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <form 
+              id="contact-form" 
+              class="contact-form glass-card"
+              action="https://formspree.io/f/mqaklzwn"
+              method="POST"
+              aria-label="Contact form"
+            >
+              <div class="form-header">
+                <h3>Send me a message</h3>
+                <p>I'll get back to you as soon as possible!</p>
+              </div>
+
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="John Doe"
+                  required
+                  pattern="[A-Za-z ]{2,50}"
+                  title="Name should be between 2 and 50 characters and contain only letters"
+                  maxlength="50"
+                  aria-describedby="name-help"
+                />
+                <small id="name-help" class="form-help">Enter your full name</small>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="john@example.com"
+                  required
+                  title="Please enter a valid email address"
+                  aria-describedby="email-help"
+                />
+                <small id="email-help" class="form-help">I'll never share your email</small>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <select id="subject" name="subject" class="form-select">
+                  <option value="">Select a topic</option>
+                  <option value="freelance">Freelance Project</option>
+                  <option value="fulltime">Full-time Opportunity</option>
+                  <option value="collaboration">Collaboration</option>
+                  <option value="question">General Question</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-textarea"
+                  rows="6"
+                  placeholder="Tell me about your project, idea, or just say hello..."
+                  required
+                  minlength="10"
+                  maxlength="1000"
+                  aria-describedby="message-help"
+                ></textarea>
+                <small id="message-help" class="form-help">
+                  <span id="char-count">0</span>/1000 characters
+                </small>
+              </div>
+
+              <button type="submit" id="submit-button" class="btn btn-primary submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loader hidden">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12a9 9 0 11-6.219-8.56"/>
+                  </svg>
+                </span>
+              </button>
+
+              <div id="my-form-status" class="form-status" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>© <span id="year"></span> Nelson Asumbrado. All Rights Reserved.</p>
+            <p class="footer-tagline">Building digital experiences with passion and precision</p>
+          </div>
+          <div class="footer-links">
+            <a href="https://github.com/doedoe123-boop" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/nelson-asumbrado-3049a2243" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a href="mailto:asum.nelson@gmail.com" aria-label="Email Contact">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="assets/vendor/js/modal.js"></script>
     <script src="assets/vendor/js/animate.js"></script>
     <script src="assets/vendor/js/carousel.js"></script>
     <script src="assets/vendor/js/formAjax.js"></script>
     <script src="assets/vendor/js/scrolldown.js"></script>
+    <script src="assets/vendor/js/theme-toggle.js"></script>
+    <script src="assets/vendor/js/code-tabs.js"></script>
   </body>
 </html>
