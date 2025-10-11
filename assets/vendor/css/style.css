@@ -187,6 +187,7 @@ p {
 /* Glass Effect */
 .glass {
   background: rgba(255, 255, 255, 0.1);
+   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-xl);
@@ -218,6 +219,7 @@ p {
   border-radius: inherit;
   padding: 2px;
   background: linear-gradient(45deg, var(--primary-400), var(--primary-500));
+  -webkit-mask-composite: destination-out;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
@@ -387,6 +389,7 @@ p {
   background: var(--bg-secondary);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-color);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: transform var(--transition-normal);
 }
@@ -447,6 +450,7 @@ p {
   padding: var(--space-md);
   cursor: pointer;
   transition: all var(--transition-normal);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   width: 50px;
   height: 50px;
@@ -565,6 +569,7 @@ p {
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-color);
   transition: all var(--transition-normal);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -690,6 +695,7 @@ p {
   border-radius: var(--radius-xl);
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(10px);
   transition: all var(--transition-normal);
   opacity: 0.7;
@@ -822,6 +828,7 @@ p {
   border: 1px solid var(--border-color);
   overflow: hidden;
   transition: all var(--transition-normal);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   position: relative;
 }
@@ -847,7 +854,7 @@ p {
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: auto;
+  object-fit: cover;
   transition: transform var(--transition-normal);
 }
 
@@ -882,6 +889,7 @@ p {
   border-radius: var(--radius-md);
   font-size: 0.75rem;
   color: white;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(5px);
 }
 
@@ -991,6 +999,7 @@ p {
   border: 1px solid var(--border-color);
   overflow: hidden;
   transition: all var(--transition-normal);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -1095,6 +1104,7 @@ p {
   border: 1px solid var(--border-color);
   overflow: hidden;
   display: none;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -1222,6 +1232,7 @@ p {
   border: 1px solid var(--border-color);
   text-align: center;
   transition: all var(--transition-normal);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -1278,6 +1289,7 @@ p {
   color: var(--text-primary);
   font-size: 1rem;
   transition: all var(--transition-normal);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -1347,6 +1359,7 @@ p {
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
   border: 1px solid var(--border-color);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: transform var(--transition-normal);
 }
@@ -2093,7 +2106,7 @@ p {
   }
 
   .hero {
-    min-height: auto;
+    min-height: 0;
     padding: var(--space-xl) 0;
   }
 
