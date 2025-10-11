@@ -126,8 +126,8 @@ class PortfolioComponents {
 
   renderTimeline() {
     const timelineContainer = document.querySelector('.timeline');
-    if (timelineContainer && timelineContainer.children.length <= 1) {
-      // Only render if timeline is empty or just has the title
+    if (timelineContainer) {
+      // Render timeline from data
       const timelineItems = this.data.timeline
         .map(item => this.createTimelineItem(item))
         .join('');

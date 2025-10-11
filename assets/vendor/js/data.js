@@ -125,6 +125,10 @@ const portfolioData = {
     {
       year: '2024',
       content: 'My focus this year has been on leveling up my skills and expanding my knowledge of modern tools and technologies. Self-study has been both my greatest challenge and my most rewarding practice. I\'ve realized that learning is a lifelong journey in this field, and I\'m committed to staying updated with the latest trends and best practices. I\'m excited to continue growing my career and taking on more ambitious projects in the future.'
+    },
+    {
+      year: '2025',
+      content: 'This year marked my transition into more leadership and DevOps responsibilities. I learned how to set up CI/CD pipelines, which revolutionized our deployment process and significantly reduced manual errors. More importantly, I discovered the value of cross-functional collaboration - working closely with frontend developers, designers, and business analysts taught me how different perspectives create better solutions. Leading a team has been both challenging and rewarding, as I\'ve learned to balance technical decision-making with mentoring and project coordination. These experiences have shaped me into a more well-rounded developer who understands that great software is built by great teams.'
     }
   ],
 
