@@ -25,7 +25,7 @@
     <link rel="apple-touch-icon" href="assets/vendor/svg/logo.svg">
     
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="assets/vendor/css/style.min.css" as="style">
+    <link rel="preload" href="assets/vendor/css/style.css" as="style">
     <link rel="preload" href="assets/images/me.png" as="image" type="image/webp">
 
     <!-- SEO Meta Tags -->
@@ -149,32 +149,141 @@
       </svg>
     </button>
     
-    <!-- Hero Section -->
+    <!-- Compact Header with Contact (visible) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-left">
+          <a class="brand" href="/">Nelson Asumbrado</a>
+        </div>
+        <nav class="header-nav">
+          <a href="#featured-projects" class="nav-link">Projects</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-right">
+          <a href="assets/Nelson_Asumbrado_FullStack_Backend_Developer.pdf" download class="btn btn-outline btn-sm">Download CV</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section (value-driven) -->
     <section class="hero section">
       <div id="particles-js"></div>
       <div class="hero-content">
         <div class="container">
-          <p class="hero-greeting">Hello World! 👋</p>
-          <h1 class="hero-name">I'm <span class="highlight">Nelson Asumbrado</span></h1>
-          <div class="hero-roles">
-            <span class="role">Full Stack Developer</span>
-            <span class="role-divider">•</span>
-            <span class="role">Server Administrator</span>
-          </div>
-          <p class="hero-description">Building and deploying scalable web applications with modern technologies. Specializing in full-stack development and cloud infrastructure.</p>
+          <p class="hero-greeting">Hi, I'm Nelson 👋</p>
+          <h1 class="hero-name">I build scalable web applications and maintain reliable production servers</h1>
+          <p class="hero-description">I design and ship full-stack products using Laravel, React, and cloud infrastructure (AWS/DigitalOcean), prioritizing performance, observability, and uptime.</p>
 
           <div class="hero-cta">
-            <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View My Work</button>
-            <button class="btn btn-outline" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">Get in Touch</button>
+            <button class="btn btn-primary" onclick="document.getElementById('featured-projects').scrollIntoView({ behavior: 'smooth' })">Featured Projects</button>
+            <button class="btn btn-outline" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">Contact</button>
           </div>
-          <div class="tech-stack">
-            <span>Laravel</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>AWS</span>
-            <span>Linux</span>
-            <span>NGINX</span>
+
+          <div class="hero-quickproof">
+            <span class="proof">Laravel → Accounting & HR systems</span>
+            <span class="proof">AWS / DO → Production deployments</span>
+            <span class="proof">MySQL → Query optimization & indexing</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects (moved up for visibility) -->
+    <section id="featured-projects" class="featured-projects section">
+      <div class="container">
+        <h2>Featured Work</h2>
+        <p class="section-subtitle">Production systems I've built and deployed.</p>
+        <div class="projects-grid">
+          <article class="project-card" id="project-accounting">
+            <div class="project-body">
+                <h3 class="project-title">E‑Invoicing System</h3>
+                <p class="project-tech">Laravel · Vue · MySQL · AWS</p>
+              <p class="project-mini">Client-specific e‑invoicing & accounting system — multi‑company workflows, approvals, and reporting.</p>
+              <div class="project-links">
+                <button class="btn btn-outline view-more" data-project="project-accounting">Read more</button>
+              </div>
+
+              <div class="project-full hidden">
+                <p class="project-desc">A client-specific e‑invoicing and accounting system built to manage billing, invoice workflows, payments, reporting, and compliance across multiple companies. This system is private to the client and contains sensitive financial data — no public demo is available.</p>
+
+                <p class="project-meta"><strong>Role:</strong> Full‑Stack Developer · Team Lead · Server Administrator</p>
+
+                <h4>Overview</h4>
+                <p class="project-desc">Designed for multi‑company operations with approval workflows, audit trails, and full invoice lifecycle management (Draft → Submitted → Approved/Rejected). The platform emphasizes traceability, accuracy, and regulatory compliance.</p>
+
+                <h4>Core Modules</h4>
+                <ul class="project-list">
+                  <li><strong>Data & Admin:</strong> User, Role & Company management, RBAC, Cost Centers</li>
+                  <li><strong>Invoicing:</strong> Invoice CRUD, Submission & Review Flow, Approvals, Rejection with remarks, Activity history</li>
+                  <li><strong>Payments:</strong> Payment CRUD, Payment history, Invoice→payment traceability</li>
+                  <li><strong>Reporting:</strong> SLS, Monthly reports, AR aging (optimized for accounting review)</li>
+                  <li><strong>Settings:</strong> Currency conversion, SharePoint integration, invoice sequencing</li>
+                  <li><strong>Audit:</strong> Global audit log tracking actions across invoices, payments, and settings</li>
+                </ul>
+
+                <h4>Infrastructure & DevOps</h4>
+                <p class="project-meta">Server provisioning and deployments via Laravel Forge on DigitalOcean/AWS. Implemented CI/CD pipelines (staging → production), monitoring, and backup strategies to ensure uptime and data safety.</p>
+
+                <h4>Key Impact</h4>
+                <ul class="project-list">
+                  <li>Improved report generation times by optimizing MySQL queries and indexing.</li>
+                  <li>Reduced deployment errors using automated CI/CD and rollbacks.</li>
+                  <li>Delivered end‑to‑end auditability required for financial compliance.</li>
+                </ul>
+
+                <p class="project-meta"><strong>Tech:</strong> Laravel (Backend), Vue (Frontend), MySQL, NGINX, Git, Laravel Forge, DigitalOcean & AWS</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-hr">
+            <div class="project-body">
+                <h3 class="project-title">Task Tracker</h3>
+                <p class="project-tech">Laravel · Vue · MySQL · Bitbucket CI</p>
+              <p class="project-mini">Internal task tracking system for one‑off and recurring tasks, employee management, and auditability.</p>
+              <div class="project-links">
+                <button class="btn btn-outline view-more" data-project="project-hr">Read more</button>
+              </div>
+
+              <div class="project-full hidden">
+                <p class="project-desc">An internal productivity tool for managing employee tasks and workloads, designed to support structured assignments and recurring operational workflows.</p>
+                <p class="project-meta"><strong>Role:</strong> Full‑stack Developer — implemented task flows, employee/company CRUD, and audit logging.</p>
+                <h4>Key Features</h4>
+                <ul class="project-list">
+                  <li><strong>Task Management:</strong> One‑off tasks, recurring tasks, and general task lists</li>
+                  <li><strong>Employee Management (CRUD):</strong> Profiles, roles, and assignments</li>
+                  <li><strong>Company Management (CRUD):</strong> Multi‑company support and configuration</li>
+                  <li><strong>Audit Log:</strong> Tracks actions across tasks and employee records for accountability</li>
+                </ul>
+                <p class="project-meta"><strong>Tech:</strong> Laravel Inertia Vue, MySQL, Laravel Forge, Bitbucket Pipeline</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" id="project-cloud">
+            <div class="project-body">
+                <h3 class="project-title">CI/CD Automation</h3>
+                <p class="project-tech">GitHub Actions · Docker · AWS · Laravel Forge</p>
+              <p class="project-mini">CI/CD and deployment automation to reduce downtime and standardize releases.</p>
+              <div class="project-links">
+                <button class="btn btn-outline view-more" data-project="project-cloud">Read more</button>
+              </div>
+
+              <div class="project-full hidden">
+                <p class="project-desc">Automated deployments and monitoring for multiple applications using CI pipelines, Docker, and cloud provider tooling to enable zero‑downtime rollouts and consistent environment configuration.</p>
+                <p class="project-meta"><strong>Role:</strong> Lead — implemented CI/CD, monitoring, and rollback strategies.</p>
+                <h4>Highlights</h4>
+                <ul class="project-list">
+                  <li>CI/CD: GitHub Actions pipelines for build, test, and deploy to staging/production</li>
+                  <li>Containerization: Docker images with consistent runtime environments</li>
+                  <li>Monitoring: Dashboards and alerts to detect issues early</li>
+                  <li>Infrastructure: DigitalOcean & AWS, deployments via Laravel Forge</li>
+                </ul>
+                <p class="project-meta"><strong>Tech:</strong> GitHub Actions, Docker, AWS, DigitalOcean, Laravel Forge</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -217,29 +326,119 @@
           </div>
         </div>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-          <div class="content">
-            <h2>My Skills</h2>
-            <div class="skills-wrapper">
-              <!-- Skills will be dynamically loaded here -->
+        <!-- Skills Section - Simple List -->
+        <section id="skills" class="skills-section-simple">
+          <h2>Technical Skills</h2>
+          
+          <div class="skills-columns">
+            <div class="skill-column">
+              <h3>Languages</h3>
+              <ul>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+                <li>Bash/Shell</li>
+              </ul>
+            </div>
+            
+            <div class="skill-column">
+              <h3>Frameworks</h3>
+              <ul>
+                <li>Laravel</li>
+                <li>Vue.js</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+            
+            <div class="skill-column">
+              <h3>Databases</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>MariaDB</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+            
+            <div class="skill-column">
+              <h3>DevOps & Cloud</h3>
+              <ul>
+                <li>AWS (EC2, S3, RDS)</li>
+                <li>DigitalOcean</li>
+                <li>Linux/Ubuntu</li>
+                <li>NGINX</li>
+                <li>Docker</li>
+                <li>CI/CD (GitHub Actions)</li>
+              </ul>
+            </div>
+            
+            <div class="skill-column">
+              <h3>Tools</h3>
+              <ul>
+                <li>Git</li>
+                <li>Laravel Forge</li>
+                <li>VS Code</li>
+                <li>Jira / Trello</li>
+                <li>Postman</li>
+              </ul>
             </div>
           </div>
         </section>
-        <!-- Timeline -->
-        <div class="timeline">
-          <!-- Timeline items will be dynamically loaded here -->
-        </div>
       </div>
     </section>
 
-    <!-- Projects Section with Enhanced Cards -->
-    <section id="projects" class="projects section">
+    <!-- Capabilities Section - Simple -->
+    <section id="projects" class="capabilities-section-simple section">
       <div class="container">
-        <h2>Check out some of my projects</h2>
+        <h2>What I Can Do For You</h2>
         
-        <div class="card-grid">
-          <!-- Projects will be dynamically loaded here -->
+        <div class="capabilities-columns">
+          <div class="capability-column">
+            <h3>Web Development</h3>
+            <ul>
+              <li>Full-stack web applications (Laravel + Vue/React)</li>
+              <li>REST API design and development</li>
+              <li>Database design and optimization</li>
+              <li>Authentication and authorization systems</li>
+              <li>Payment integration</li>
+            </ul>
+          </div>
+          
+          <div class="capability-column">
+            <h3>Server & Infrastructure</h3>
+            <ul>
+              <li>Cloud server setup (AWS, DigitalOcean)</li>
+              <li>Linux server administration</li>
+              <li>SSL certificates and security hardening</li>
+              <li>Automated backups and monitoring</li>
+              <li>CI/CD pipeline setup</li>
+            </ul>
+          </div>
+          
+          <div class="capability-column">
+            <h3>Business Solutions</h3>
+            <ul>
+              <li>Invoicing and accounting systems</li>
+              <li>HR and task management tools</li>
+              <li>Multi-company/multi-tenant applications</li>
+              <li>Workflow automation</li>
+              <li>Reporting and analytics dashboards</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="work-process">
+          <h3>My Process</h3>
+          <ol>
+            <li><strong>Discovery</strong> — Understand your requirements and business goals</li>
+            <li><strong>Planning</strong> — Design database schema and system architecture</li>
+            <li><strong>Development</strong> — Build with clean, maintainable code</li>
+            <li><strong>Testing</strong> — Thorough testing before deployment</li>
+            <li><strong>Deployment</strong> — Launch to production with CI/CD</li>
+            <li><strong>Support</strong> — Ongoing maintenance and updates</li>
+          </ol>
         </div>
       </div>
     </section>
@@ -392,42 +591,45 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-info">
-            <p>© <span id="year"></span> Nelson Asumbrado. All Rights Reserved.</p>
-            <p class="footer-tagline">Building digital experiences with passion and precision</p>
-          </div>
-          <div class="footer-links">
-            <a href="https://github.com/doedoe123-boop" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-              </svg>
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/nelson-asumbrado-3049a2243" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-              </svg>
-              LinkedIn
-            </a>
-            <a href="mailto:asum.nelson@gmail.com" aria-label="Email Contact">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              Email
-            </a>
-          </div>
-        </div>
+        <p class="footer-copyright">© <span id="year"></span> Nelson Asumbrado</p>
       </div>
     </footer>
+    <!-- Sticky Contact Bar -->
+    <div class="sticky-contact-bar">
+      <div class="container sticky-contact-inner">
+        <span class="sticky-text">Let's work together</span>
+        <div class="sticky-links">
+          <a href="mailto:asum.nelson@gmail.com" class="sticky-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            asum.nelson@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/nelson-asumbrado-3049a2243" target="_blank" rel="noopener noreferrer" class="sticky-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/doedoe123-boop" target="_blank" rel="noopener noreferrer" class="sticky-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     <script src="assets/vendor/js/utils.js"></script>
     <script src="assets/vendor/js/data.js"></script>
+    <script src="assets/vendor/js/modal.js"></script>
     <script src="assets/vendor/js/components.js"></script>
     <script src="assets/vendor/js/animate.js"></script>
     <script src="assets/vendor/js/carousel.js"></script>

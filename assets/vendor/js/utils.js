@@ -16,30 +16,36 @@ class PortfolioUtils {
   // Lazy loading utility
   static lazyLoad(selector, callback) {
     const elements = document.querySelectorAll(selector);
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          callback(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-    elements.forEach(el => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
   }
 
   // Animate on scroll utility
   static animateOnScroll() {
-    const animateElements = document.querySelectorAll('.scroll-animate');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-        }
-      });
-    }, { threshold: 0.2 });
+    const animateElements = document.querySelectorAll(".scroll-animate");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-    animateElements.forEach(el => observer.observe(el));
+    animateElements.forEach((el) => observer.observe(el));
   }
 
   // Form validation utility
@@ -47,15 +53,15 @@ class PortfolioUtils {
     const form = document.getElementById(formId);
     if (!form) return false;
 
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    const inputs = form.querySelectorAll("input[required], textarea[required]");
     let isValid = true;
 
-    inputs.forEach(input => {
+    inputs.forEach((input) => {
       if (!input.value.trim()) {
-        input.classList.add('error');
+        input.classList.add("error");
         isValid = false;
       } else {
-        input.classList.remove('error');
+        input.classList.remove("error");
       }
     });
 
@@ -68,7 +74,7 @@ class PortfolioUtils {
       try {
         localStorage.setItem(key, JSON.stringify(value));
       } catch (e) {
-        console.warn('Could not save to localStorage:', e);
+        console.warn("Could not save to localStorage:", e);
       }
     },
 
@@ -77,7 +83,7 @@ class PortfolioUtils {
         const item = localStorage.getItem(key);
         return item ? JSON.parse(item) : null;
       } catch (e) {
-        console.warn('Could not retrieve from localStorage:', e);
+        console.warn("Could not retrieve from localStorage:", e);
         return null;
       }
     },
@@ -86,32 +92,39 @@ class PortfolioUtils {
       try {
         localStorage.removeItem(key);
       } catch (e) {
-        console.warn('Could not remove from localStorage:', e);
+        console.warn("Could not remove from localStorage:", e);
       }
-    }
+    },
   };
 
   // Performance monitoring
   static performance = {
     mark(name) {
-      if ('performance' in window) {
+      if ("performance" in window) {
         performance.mark(name);
       }
     },
 
     measure(name, startMark, endMark) {
-      if ('performance' in window) {
+      if ("performance" in window) {
         performance.measure(name, startMark, endMark);
         const measures = performance.getEntriesByName(name);
         if (measures.length > 0) {
           console.log(`${name}: ${measures[0].duration.toFixed(2)}ms`);
         }
       }
-    }
+    },
   };
+
+  // View More button toggle - DISABLED (now using modal instead)
+  // See modal.js for the new implementation
+  static initViewMoreButtons() {
+    // Disabled - modal.js handles this now
+  }
 }
 
 // Initialize utilities when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   PortfolioUtils.animateOnScroll();
+  // PortfolioUtils.initViewMoreButtons(); // Disabled - using modal instead
 });
