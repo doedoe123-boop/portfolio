@@ -1,119 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Meta Charset and Compatibility -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Asumbrado — Full Stack Developer</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="format-detection" content="telephone=no" />
+    <!-- SEO -->
+    <meta name="description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. Building reliable production systems.">
+    <meta name="keywords" content="Full Stack Developer, Laravel, React, AWS, PHP, Vue.js, Node.js, Server Administrator, DevOps">
+    <meta name="author" content="Nelson Asumbrado">
+    <meta name="robots" content="index, follow, max-image-preview:large">
 
-    <!-- Title of the Webpage -->
-    <title>Nelson Asumbrado | Portfolio</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nelson Asumbrado">
+    <meta property="og:title" content="Nelson Asumbrado — Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure.">
+    <meta property="og:image" content="https://nelson-dev.vercel.app/assets/images/portfolio.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://nelson-dev.vercel.app">
+    <meta property="og:locale" content="en_PH">
 
-    <!-- Link to External Stylesheet -->
-    <link rel="stylesheet" href="assets/vendor/css/style.css" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nelson Asumbrado — Full Stack Developer">
+    <meta name="twitter:description" content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure.">
+    <meta name="twitter:image" content="https://nelson-dev.vercel.app/assets/images/portfolio.webp">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nelson-dev.vercel.app">
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/vendor/svg/logo.svg" type="image/x-icon" />
+    <link rel="icon" href="assets/vendor/svg/logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/vendor/svg/logo.svg">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="assets/vendor/css/style.css" as="style">
-    <link rel="preload" href="assets/images/me.png" as="image" type="image/webp">
 
-    <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions."
-    />
-    <meta
-      name="keywords"
-      content="web development, portfolio, HTML, CSS, JavaScript, PHP, Laravel, React, Node.js, NGINX, AWS, Linux, Full Stack Developer, Server Administrator"
-    />
-    <meta name="author" content="Nelson Asumbrado" />
-    <meta name="language" content="Filipino" />
-    <meta name="revisit-after" content="7 days" />
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <!-- Open Graph Meta Tags for Facebook & LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Nelson Asumbrado Portfolio" />
-    <meta
-      property="og:title"
-      content="Nelson Asumbrado - Full Stack Developer & Server Administrator"
-    />
-    <meta
-      property="og:description"
-      content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions."
-    />
-    <meta
-      property="og:image"
-      content="https://nelson-dev.vercel.app/assets/images/portfolio.webp"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://nelson-dev.vercel.app" />
-    <meta property="og:locale" content="en_PH" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Nelson Asumbrado - Full Stack Developer & Server Administrator"
-    />
-    <meta
-      name="twitter:description"
-      content="Full Stack Developer and Server Administrator specializing in Laravel, React, AWS, and cloud infrastructure. View my portfolio of web development projects and cloud solutions."
-    />
-    <meta
-      name="twitter:image"
-      content="https://nelson-dev.vercel.app/assets/images/portfolio.webp"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Nelson Asumbrado's Portfolio Preview"
-    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          maxWidth: {
+            'site': '1024px',
+          },
+        },
+      },
+    }
+    </script>
 
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://nelson-dev.vercel.app" />
+    <style>
+      ::selection { background: rgba(79, 70, 229, 0.15); }
+      .tr { transition: all 180ms ease-in-out; }
 
-    <!-- PWA Support -->
-    <link rel="manifest" href="manifest.json" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+      /* Card hover elevation */
+      .card-hover { transition: box-shadow 180ms ease, border-color 180ms ease, transform 180ms ease; }
+      .card-hover:hover {
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04), 0 1px 2px -1px rgba(0,0,0,0.04);
+        transform: translateY(-1px);
+      }
 
-    <!-- Additional Meta Tags -->
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="google" content="notranslate" />
+      /* Form focus */
+      input:focus, select:focus, textarea:focus {
+        border-color: #6366f1 !important;
+        box-shadow: 0 0 0 3px rgba(99,102,241,0.08) !important;
+        outline: none;
+      }
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-DERXKFMM7P"
-    ></script>
+      /* Scroll reveal — opacity only, no motion */
+      .reveal { opacity: 0; transition: opacity 500ms ease; }
+      .reveal.visible { opacity: 1; }
+
+      /* Timeline current pulse */
+      @keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 0 rgba(79,70,229,0.3); } 50% { box-shadow: 0 0 0 4px rgba(79,70,229,0); } }
+      .dot-current { animation: pulse-dot 2.5s ease-in-out infinite; }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .tr, .card-hover { transition: none; }
+        .card-hover:hover { transform: none; }
+        .reveal { opacity: 1; transition: none; }
+        .dot-current { animation: none; }
+      }
+    </style>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DERXKFMM7P"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-DERXKFMM7P");
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DERXKFMM7P');
     </script>
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -127,515 +120,572 @@
         "https://linkedin.com/in/nelson-asumbrado-3049a2243"
       ],
       "knowsAbout": ["Laravel", "React", "AWS", "Node.js", "PHP", "JavaScript", "Vue.js", "MySQL", "Linux"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "Philippines"
-      }
+      "address": { "@type": "PostalAddress", "addressCountry": "Philippines" }
     }
     </script>
-  </head>
-  
-  <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
-      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
-      <svg class="moon-icon hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-      </svg>
-    </button>
-    
-    <!-- Compact Header with Contact (visible) -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="header-left">
-          <a class="brand" href="/">Nelson Asumbrado</a>
-        </div>
-        <nav class="header-nav">
-          <a href="#featured-projects" class="nav-link">Projects</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#contact" class="nav-link">Contact</a>
+</head>
+
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased">
+
+    <!-- Skip Link -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-indigo-600 focus:text-white focus:rounded-md focus:text-sm">
+      Skip to main content
+    </a>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 inset-x-0 z-40 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-200/80 dark:border-zinc-800/80">
+      <div class="max-w-site mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="text-[15px] font-semibold text-zinc-900 dark:text-zinc-100 hover:text-indigo-600 dark:hover:text-indigo-400 tr">
+          Nelson Asumbrado
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#skills" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr">Skills</a>
+          <a href="#projects" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr">Projects</a>
+          <a href="#experience" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr">Experience</a>
+          <a href="#contact" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr">Contact</a>
         </nav>
-        <div class="header-right">
-          <a href="assets/Nelson_Asumbrado_FullStack_Backend_Developer.pdf" download class="btn btn-outline btn-sm">Download CV</a>
+
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded-md text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 tr">
+            <svg class="w-[18px] h-[18px] dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+            </svg>
+            <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+            </svg>
+          </button>
+
+          <a href="assets/Nelson_Asumbrado_FullStack_Backend_Developer.pdf" download
+             class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 text-sm font-medium rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 tr">
+            Resume
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+            </svg>
+          </a>
+
+          <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden p-2 rounded-md text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 tr">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/>
+            </svg>
+          </button>
         </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+        <nav class="max-w-site mx-auto px-6 py-4 flex flex-col gap-1">
+          <a href="#skills" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr py-2">Skills</a>
+          <a href="#projects" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr py-2">Projects</a>
+          <a href="#experience" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr py-2">Experience</a>
+          <a href="#contact" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr py-2">Contact</a>
+          <a href="assets/Nelson_Asumbrado_FullStack_Backend_Developer.pdf" download class="sm:hidden text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 tr py-2">Download Resume</a>
+        </nav>
       </div>
     </header>
 
-    <!-- Hero Section (value-driven) -->
-    <section class="hero section">
-      <div id="particles-js"></div>
-      <div class="hero-content">
-        <div class="container">
-          <p class="hero-greeting">Hi, I'm Nelson 👋</p>
-          <h1 class="hero-name">I build scalable web applications and maintain reliable production servers</h1>
-          <p class="hero-description">I design and ship full-stack products using Laravel, React, and cloud infrastructure (AWS/DigitalOcean), prioritizing performance, observability, and uptime.</p>
+    <!-- MAIN -->
+    <main id="main">
 
-          <div class="hero-cta">
-            <button class="btn btn-primary" onclick="document.getElementById('featured-projects').scrollIntoView({ behavior: 'smooth' })">Featured Projects</button>
-            <button class="btn btn-outline" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })">Contact</button>
+      <!-- 1. HERO -->
+      <section class="pt-32 pb-16 md:pt-40 md:pb-24">
+        <div class="max-w-site mx-auto px-6">
+          <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-4 tracking-wide">
+            Full Stack Developer &amp; Server Administrator
+          </p>
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 max-w-[640px] mb-6" style="line-height:1.1">
+            I build production systems that are reliable and scalable.
+          </h1>
+          <p class="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-[520px] mb-10">
+            Designing and shipping full-stack applications with Laravel, React, and cloud infrastructure &mdash; with a focus on performance, uptime, and clean architecture.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-14">
+            <a href="#projects"
+               class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-md bg-indigo-600 text-white hover:bg-indigo-700 tr">
+              View Projects
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            <a href="#contact"
+               class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-md border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 tr">
+              Get in Touch
+            </a>
           </div>
-
-          <div class="hero-quickproof">
-            <span class="proof">Laravel → Accounting & HR systems</span>
-            <span class="proof">AWS / DO → Production deployments</span>
-            <span class="proof">MySQL → Query optimization & indexing</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Projects (moved up for visibility) -->
-    <section id="featured-projects" class="featured-projects section">
-      <div class="container">
-        <h2>Featured Work</h2>
-        <p class="section-subtitle">Production systems I've built and deployed.</p>
-        <div class="projects-grid">
-          <article class="project-card" id="project-accounting">
-            <div class="project-body">
-                <h3 class="project-title">E‑Invoicing System</h3>
-                <p class="project-tech">Laravel · Vue · MySQL · AWS</p>
-              <p class="project-mini">Client-specific e‑invoicing & accounting system — multi‑company workflows, approvals, and reporting.</p>
-              <div class="project-links">
-                <button class="btn btn-outline view-more" data-project="project-accounting">Read more</button>
-              </div>
-
-              <div class="project-full hidden">
-                <p class="project-desc">A client-specific e‑invoicing and accounting system built to manage billing, invoice workflows, payments, reporting, and compliance across multiple companies. This system is private to the client and contains sensitive financial data — no public demo is available.</p>
-
-                <p class="project-meta"><strong>Role:</strong> Full‑Stack Developer · Team Lead · Server Administrator</p>
-
-                <h4>Overview</h4>
-                <p class="project-desc">Designed for multi‑company operations with approval workflows, audit trails, and full invoice lifecycle management (Draft → Submitted → Approved/Rejected). The platform emphasizes traceability, accuracy, and regulatory compliance.</p>
-
-                <h4>Core Modules</h4>
-                <ul class="project-list">
-                  <li><strong>Data & Admin:</strong> User, Role & Company management, RBAC, Cost Centers</li>
-                  <li><strong>Invoicing:</strong> Invoice CRUD, Submission & Review Flow, Approvals, Rejection with remarks, Activity history</li>
-                  <li><strong>Payments:</strong> Payment CRUD, Payment history, Invoice→payment traceability</li>
-                  <li><strong>Reporting:</strong> SLS, Monthly reports, AR aging (optimized for accounting review)</li>
-                  <li><strong>Settings:</strong> Currency conversion, SharePoint integration, invoice sequencing</li>
-                  <li><strong>Audit:</strong> Global audit log tracking actions across invoices, payments, and settings</li>
-                </ul>
-
-                <h4>Infrastructure & DevOps</h4>
-                <p class="project-meta">Server provisioning and deployments via Laravel Forge on DigitalOcean/AWS. Implemented CI/CD pipelines (staging → production), monitoring, and backup strategies to ensure uptime and data safety.</p>
-
-                <h4>Key Impact</h4>
-                <ul class="project-list">
-                  <li>Improved report generation times by optimizing MySQL queries and indexing.</li>
-                  <li>Reduced deployment errors using automated CI/CD and rollbacks.</li>
-                  <li>Delivered end‑to‑end auditability required for financial compliance.</li>
-                </ul>
-
-                <p class="project-meta"><strong>Tech:</strong> Laravel (Backend), Vue (Frontend), MySQL, NGINX, Git, Laravel Forge, DigitalOcean & AWS</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" id="project-hr">
-            <div class="project-body">
-                <h3 class="project-title">Task Tracker</h3>
-                <p class="project-tech">Laravel · Vue · MySQL · Bitbucket CI</p>
-              <p class="project-mini">Internal task tracking system for one‑off and recurring tasks, employee management, and auditability.</p>
-              <div class="project-links">
-                <button class="btn btn-outline view-more" data-project="project-hr">Read more</button>
-              </div>
-
-              <div class="project-full hidden">
-                <p class="project-desc">An internal productivity tool for managing employee tasks and workloads, designed to support structured assignments and recurring operational workflows.</p>
-                <p class="project-meta"><strong>Role:</strong> Full‑stack Developer — implemented task flows, employee/company CRUD, and audit logging.</p>
-                <h4>Key Features</h4>
-                <ul class="project-list">
-                  <li><strong>Task Management:</strong> One‑off tasks, recurring tasks, and general task lists</li>
-                  <li><strong>Employee Management (CRUD):</strong> Profiles, roles, and assignments</li>
-                  <li><strong>Company Management (CRUD):</strong> Multi‑company support and configuration</li>
-                  <li><strong>Audit Log:</strong> Tracks actions across tasks and employee records for accountability</li>
-                </ul>
-                <p class="project-meta"><strong>Tech:</strong> Laravel Inertia Vue, MySQL, Laravel Forge, Bitbucket Pipeline</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" id="project-cloud">
-            <div class="project-body">
-                <h3 class="project-title">CI/CD Automation</h3>
-                <p class="project-tech">GitHub Actions · Docker · AWS · Laravel Forge</p>
-              <p class="project-mini">CI/CD and deployment automation to reduce downtime and standardize releases.</p>
-              <div class="project-links">
-                <button class="btn btn-outline view-more" data-project="project-cloud">Read more</button>
-              </div>
-
-              <div class="project-full hidden">
-                <p class="project-desc">Automated deployments and monitoring for multiple applications using CI pipelines, Docker, and cloud provider tooling to enable zero‑downtime rollouts and consistent environment configuration.</p>
-                <p class="project-meta"><strong>Role:</strong> Lead — implemented CI/CD, monitoring, and rollback strategies.</p>
-                <h4>Highlights</h4>
-                <ul class="project-list">
-                  <li>CI/CD: GitHub Actions pipelines for build, test, and deploy to staging/production</li>
-                  <li>Containerization: Docker images with consistent runtime environments</li>
-                  <li>Monitoring: Dashboards and alerts to detect issues early</li>
-                  <li>Infrastructure: DigitalOcean & AWS, deployments via Laravel Forge</li>
-                </ul>
-                <p class="project-meta"><strong>Tech:</strong> GitHub Actions, Docker, AWS, DigitalOcean, Laravel Forge</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-      <!-- About Section -->
-      <section id="about" class="about-section">
-      <div class="container">
-        <div class="about-header">
-           <h2>About Me</h2>
-        </div>
-        <div class="about-wrapper">
-          <!-- Photo and Text -->
-          <img
-            src="assets/images/me.png"
-            alt="Nelson Asumbrado, Full Stack Developer, professional headshot"
-            class="about-photo"
-            width="250"
-            height="250"
-            loading="lazy"
-          />
-          <div class="about-text">
-            <p>
-              <span id="intro"></span>, a Full Stack Developer and Server
-              Administrator with over 3+ years of experience in building and
-              deploying scalable web applications. My expertise spans across
-              frontend development with React and Vue.js, backend development
-              with Laravel and Node.js, and server management using AWS, Linux,
-              and NGINX.
-            </p>
-            <p>
-              I have a strong foundation in both development and operations,
-              allowing me to handle projects from conception to deployment. When
-              I'm not coding or managing servers, you'll find me playing
-              Valorant or watching anime. I'm passionate about staying current
-              with the latest tech trends, especially in cloud computing and
-              DevOps practices.
-            </p>
+          <div class="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-zinc-400 dark:text-zinc-500">
+            <span>3+ years production experience</span>
+            <span class="hidden sm:inline text-zinc-300 dark:text-zinc-700">/</span>
+            <span>Laravel &middot; React &middot; Vue.js</span>
+            <span class="hidden sm:inline text-zinc-300 dark:text-zinc-700">/</span>
+            <span>AWS &middot; DigitalOcean</span>
           </div>
         </div>
+      </section>
 
-        <!-- Skills Section - Simple List -->
-        <section id="skills" class="skills-section-simple">
-          <h2>Technical Skills</h2>
-          
-          <div class="skills-columns">
-            <div class="skill-column">
-              <h3>Languages</h3>
-              <ul>
-                <li>PHP</li>
-                <li>JavaScript</li>
-                <li>SQL</li>
-                <li>HTML/CSS</li>
-                <li>Bash/Shell</li>
+      <!-- 2. SKILLS -->
+      <section id="skills" class="py-16 md:py-20 bg-zinc-50/80 dark:bg-zinc-900/40 border-y border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-site mx-auto px-6">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-1.5">Technical Expertise</h2>
+          <p class="text-zinc-500 dark:text-zinc-400 mb-12 text-[15px]">Technologies I use to build and ship production software.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="reveal bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md p-5 card-hover">
+              <h3 class="text-xs font-semibold uppercase tracking-widest text-zinc-900 dark:text-zinc-100 mb-3 pb-3 border-b border-zinc-100 dark:border-zinc-800">Backend &amp; APIs</h3>
+              <p class="text-[13px] text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">Server-side systems, REST APIs, and database-driven applications at scale.</p>
+              <ul class="space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
+                <li>PHP / Laravel</li>
+                <li>Node.js</li>
+                <li>RESTful API Design</li>
+                <li>SQL / Query Optimization</li>
+                <li>Bash / Shell Scripting</li>
               </ul>
             </div>
-            
-            <div class="skill-column">
-              <h3>Frameworks</h3>
-              <ul>
-                <li>Laravel</li>
+            <div class="reveal bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md p-5 card-hover">
+              <h3 class="text-xs font-semibold uppercase tracking-widest text-zinc-900 dark:text-zinc-100 mb-3 pb-3 border-b border-zinc-100 dark:border-zinc-800">Frontend</h3>
+              <p class="text-[13px] text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">Responsive interfaces with modern frameworks and component architecture.</p>
+              <ul class="space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
                 <li>Vue.js</li>
                 <li>React</li>
-                <li>Node.js</li>
+                <li>JavaScript / TypeScript</li>
                 <li>Tailwind CSS</li>
+                <li>HTML / CSS</li>
               </ul>
             </div>
-            
-            <div class="skill-column">
-              <h3>Databases</h3>
-              <ul>
-                <li>MySQL</li>
-                <li>MariaDB</li>
-                <li>PostgreSQL</li>
-              </ul>
-            </div>
-            
-            <div class="skill-column">
-              <h3>DevOps & Cloud</h3>
-              <ul>
+            <div class="reveal bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md p-5 card-hover">
+              <h3 class="text-xs font-semibold uppercase tracking-widest text-zinc-900 dark:text-zinc-100 mb-3 pb-3 border-b border-zinc-100 dark:border-zinc-800">Infrastructure</h3>
+              <p class="text-[13px] text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">Provisioning servers, managing deployments, and maintaining production uptime.</p>
+              <ul class="space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
                 <li>AWS (EC2, S3, RDS)</li>
                 <li>DigitalOcean</li>
-                <li>Linux/Ubuntu</li>
+                <li>Linux / Ubuntu Server</li>
                 <li>NGINX</li>
                 <li>Docker</li>
                 <li>CI/CD (GitHub Actions)</li>
               </ul>
             </div>
-            
-            <div class="skill-column">
-              <h3>Tools</h3>
-              <ul>
-                <li>Git</li>
+            <div class="reveal bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md p-5 card-hover">
+              <h3 class="text-xs font-semibold uppercase tracking-widest text-zinc-900 dark:text-zinc-100 mb-3 pb-3 border-b border-zinc-100 dark:border-zinc-800">Data &amp; Tooling</h3>
+              <p class="text-[13px] text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">Schema design, performance tuning, and modern development workflows.</p>
+              <ul class="space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
+                <li>MySQL / MariaDB</li>
+                <li>PostgreSQL</li>
+                <li>Git / GitHub</li>
                 <li>Laravel Forge</li>
-                <li>VS Code</li>
                 <li>Jira / Trello</li>
                 <li>Postman</li>
               </ul>
             </div>
           </div>
-        </section>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- Capabilities Section - Simple -->
-    <section id="projects" class="capabilities-section-simple section">
-      <div class="container">
-        <h2>What I Can Do For You</h2>
-        
-        <div class="capabilities-columns">
-          <div class="capability-column">
-            <h3>Web Development</h3>
-            <ul>
-              <li>Full-stack web applications (Laravel + Vue/React)</li>
-              <li>REST API design and development</li>
-              <li>Database design and optimization</li>
-              <li>Authentication and authorization systems</li>
-              <li>Payment integration</li>
-            </ul>
-          </div>
-          
-          <div class="capability-column">
-            <h3>Server & Infrastructure</h3>
-            <ul>
-              <li>Cloud server setup (AWS, DigitalOcean)</li>
-              <li>Linux server administration</li>
-              <li>SSL certificates and security hardening</li>
-              <li>Automated backups and monitoring</li>
-              <li>CI/CD pipeline setup</li>
-            </ul>
-          </div>
-          
-          <div class="capability-column">
-            <h3>Business Solutions</h3>
-            <ul>
-              <li>Invoicing and accounting systems</li>
-              <li>HR and task management tools</li>
-              <li>Multi-company/multi-tenant applications</li>
-              <li>Workflow automation</li>
-              <li>Reporting and analytics dashboards</li>
-            </ul>
+      <!-- 3. FEATURED PROJECTS -->
+      <section id="projects" class="py-16 md:py-20">
+        <div class="max-w-site mx-auto px-6">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-1.5">Featured Work</h2>
+          <p class="text-zinc-500 dark:text-zinc-400 mb-12 text-[15px]">Production systems I designed, built, and deployed.</p>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+
+            <!-- Project 1 — Lead -->
+            <article class="reveal rounded-md border border-zinc-200 dark:border-zinc-800 border-t-2 border-t-indigo-600 dark:border-t-indigo-500 p-6 card-hover flex flex-col">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-lg font-medium text-zinc-900 dark:text-zinc-100">E-Invoicing System</h3>
+                <span class="shrink-0 ml-3 text-[11px] font-medium text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">Private</span>
+              </div>
+              <p class="text-xs font-medium text-indigo-600 dark:text-indigo-400 mb-3">Full-Stack Developer &middot; Team Lead</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Laravel</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Vue.js</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MySQL</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">AWS</span>
+              </div>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5 flex-1">
+                Multi-company e-invoicing and accounting system with approval workflows, audit trails, and full invoice lifecycle management for financial compliance.
+              </p>
+              <ul class="space-y-2 mt-auto">
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Optimized report generation via MySQL query tuning
+                </li>
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Reduced deployment errors with automated CI/CD
+                </li>
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  End-to-end audit compliance delivered
+                </li>
+              </ul>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="reveal rounded-md border border-zinc-200 dark:border-zinc-800 p-6 card-hover flex flex-col">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-lg font-medium text-zinc-900 dark:text-zinc-100">Task Tracker</h3>
+                <span class="shrink-0 ml-3 text-[11px] font-medium text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">Internal</span>
+              </div>
+              <p class="text-xs font-medium text-indigo-600 dark:text-indigo-400 mb-3">Full-Stack Developer</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Laravel</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Vue.js</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MySQL</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Bitbucket CI</span>
+              </div>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5 flex-1">
+                Internal productivity tool for managing employee tasks and workloads &mdash; supporting structured assignments, recurring workflows, and multi-company operations.
+              </p>
+              <ul class="space-y-2 mt-auto">
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Task lifecycle: one-off, recurring, and general lists
+                </li>
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Employee and company CRUD with RBAC
+                </li>
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Full audit logging for accountability
+                </li>
+              </ul>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="reveal rounded-md border border-zinc-200 dark:border-zinc-800 p-6 card-hover flex flex-col">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-lg font-medium text-zinc-900 dark:text-zinc-100">CI/CD Automation</h3>
+                <span class="shrink-0 ml-3 text-[11px] font-medium text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">DevOps</span>
+              </div>
+              <p class="text-xs font-medium text-indigo-600 dark:text-indigo-400 mb-3">Lead Engineer</p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">GitHub Actions</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Docker</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">AWS</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Laravel Forge</span>
+              </div>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5 flex-1">
+                Automated deployments and monitoring for multiple applications &mdash; enabling zero-downtime rollouts and consistent environment configuration across staging and production.
+              </p>
+              <ul class="space-y-2 mt-auto">
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Build, test, deploy pipelines via GitHub Actions
+                </li>
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Docker containers for consistent runtime
+                </li>
+                <li class="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
+                  <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Monitoring dashboards and alerting
+                </li>
+              </ul>
+            </article>
+
           </div>
         </div>
-        
-        <div class="work-process">
-          <h3>My Process</h3>
-          <ol>
-            <li><strong>Discovery</strong> — Understand your requirements and business goals</li>
-            <li><strong>Planning</strong> — Design database schema and system architecture</li>
-            <li><strong>Development</strong> — Build with clean, maintainable code</li>
-            <li><strong>Testing</strong> — Thorough testing before deployment</li>
-            <li><strong>Deployment</strong> — Launch to production with CI/CD</li>
-            <li><strong>Support</strong> — Ongoing maintenance and updates</li>
-          </ol>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Interactive Terminal Section -->
-    <section class="terminal-section section">
-      <div class="container">
-        <h2>Command Line Summary</h2>
-        <div class="interactive-terminal">
-          <div class="terminal-header">
-            <div class="terminal-controls"></div>
-            <span class="terminal-title">nelson@portfolio:~$</span>
+      <!-- 4. EXPERIENCE -->
+      <section id="experience" class="py-16 md:py-20 bg-zinc-50/80 dark:bg-zinc-900/40 border-y border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-site mx-auto px-6">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-1.5">Experience</h2>
+          <p class="text-zinc-500 dark:text-zinc-400 mb-12 text-[15px]">Professional growth and production ownership.</p>
+
+          <div class="max-w-2xl">
+            <div class="grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] gap-x-6">
+
+              <div class="reveal text-sm font-medium text-zinc-400 dark:text-zinc-500 pt-6">2025</div>
+              <div class="reveal border-l-2 border-zinc-200 dark:border-zinc-800 pl-6 pb-10 pt-6 relative">
+                <div class="absolute -left-[6px] top-[28px] w-2.5 h-2.5 rounded-full bg-indigo-600 ring-2 ring-zinc-50 dark:ring-zinc-900 dot-current"></div>
+                <h3 class="text-base font-medium text-zinc-900 dark:text-zinc-100 mb-1">DevOps &amp; Team Leadership</h3>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  Implemented CI/CD pipelines that eliminated manual deployment errors. Led cross-functional team coordination across frontend, design, and business. Mentored junior developers on architecture and code review processes.
+                </p>
+              </div>
+
+              <div class="reveal text-sm font-medium text-zinc-400 dark:text-zinc-500 pt-6">2023 &ndash; 24</div>
+              <div class="reveal border-l-2 border-zinc-200 dark:border-zinc-800 pl-6 pb-10 pt-6 relative">
+                <div class="absolute -left-[6px] top-[28px] w-2.5 h-2.5 rounded-full bg-indigo-600 ring-2 ring-zinc-50 dark:ring-zinc-900"></div>
+                <h3 class="text-base font-medium text-zinc-900 dark:text-zinc-100 mb-1">Production Backend Systems</h3>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  Built and deployed Laravel APIs on AWS and DigitalOcean. Designed database schemas for multi-company accounting and HR systems. Deepened expertise in cloud infrastructure, server hardening, and performance optimization.
+                </p>
+              </div>
+
+              <div class="reveal text-sm font-medium text-zinc-400 dark:text-zinc-500 pt-6">2022</div>
+              <div class="reveal border-l-2 border-zinc-200 dark:border-zinc-800 pl-6 pb-10 pt-6 relative">
+                <div class="absolute -left-[6px] top-[28px] w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-600 ring-2 ring-zinc-50 dark:ring-zinc-900"></div>
+                <h3 class="text-base font-medium text-zinc-900 dark:text-zinc-100 mb-1">First Professional Role</h3>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  Began career as a web developer working on diverse client projects spanning WordPress, Laravel, and cloud hosting. Built foundational experience in production workflows and client communication.
+                </p>
+              </div>
+
+              <div class="reveal text-sm font-medium text-zinc-400 dark:text-zinc-500 pt-6">2021</div>
+              <div class="reveal pl-6 pt-6 relative">
+                <div class="absolute -left-[6px] top-[28px] w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-600 ring-2 ring-zinc-50 dark:ring-zinc-900"></div>
+                <h3 class="text-base font-medium text-zinc-900 dark:text-zinc-100 mb-1">College Foundations</h3>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  Led a team project building a help desk system. First experience with collaborative development and delivering working software under real constraints.
+                </p>
+              </div>
+
+            </div>
           </div>
-          <div class="terminal-body">
-            <div class="terminal-line">
-              <span class="prompt">$</span>
-              <span class="command">whoami</span>
+
+          <!-- Testimonials -->
+          <div class="mt-20">
+            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-8">What Colleagues Say</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+              <blockquote class="reveal rounded-md border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-indigo-500/30 dark:border-l-indigo-400/20 p-5 card-hover">
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">"Nelson is skilled and ensures every detail of each project's vision is executed perfectly. He communicates problems clearly and lays out solutions professionally."</p>
+                <footer class="text-sm">
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">Leanne Danielle M.</span>
+                  <span class="text-zinc-400 dark:text-zinc-500"> &middot; Marketing</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="reveal rounded-md border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-indigo-500/30 dark:border-l-indigo-400/20 p-5 card-hover">
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">"We've worked on several projects, both local and international, and Nelson consistently meets client expectations. His passion for development makes him a valuable asset."</p>
+                <footer class="text-sm">
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">Alexis B.</span>
+                  <span class="text-zinc-400 dark:text-zinc-500"> &middot; Marketing</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="reveal rounded-md border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-indigo-500/30 dark:border-l-indigo-400/20 p-5 card-hover">
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">"I highly recommend Nelson. He's always reliable whenever I need assistance and consistently showcases his deep understanding of web development."</p>
+                <footer class="text-sm">
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">Angeluz Nicole P.</span>
+                  <span class="text-zinc-400 dark:text-zinc-500"> &middot; Web Developer &amp; QA</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="reveal rounded-md border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-indigo-500/30 dark:border-l-indigo-400/20 p-5 card-hover">
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">"Nelson is a talented developer who knows his stuff when it comes to modern web technologies. He always gets the job done efficiently."</p>
+                <footer class="text-sm">
+                  <span class="font-medium text-zinc-900 dark:text-zinc-100">Veronica G.</span>
+                  <span class="text-zinc-400 dark:text-zinc-500"> &middot; Content Writer</span>
+                </footer>
+              </blockquote>
+
             </div>
-            <div class="terminal-output">
-              Nelson Asumbrado - Full Stack Developer<br>
-              Specializing in Laravel, React, and AWS<br>
-              Location: Philippines 🇵🇭
-            </div>
-            <div class="terminal-line">
-              <span class="prompt">$</span>
-              <span class="command">skills --list</span>
-            </div>
-            <div class="terminal-output">
-              Backend: Laravel, Node.js, PHP, MySQL<br>
-              Frontend: React, Vue.js, JavaScript, CSS<br>
-              DevOps: AWS, Linux, NGINX, Docker<br>
-              Tools: Git, Jira, Trello, VS Code
-            </div>
-            <div class="terminal-line">
-              <span class="prompt">$</span>
-              <input type="text" class="terminal-input" placeholder="Try: help, projects, contact, experience">
-            </div>
-            <div id="terminal-response"></div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="testimonials">
-      <div class="container testimonials-header">
-        <h2 class="scroll-animate">What People Say</h2>
-      </div>
-      <div class="testimonial-slider">
-        <div class="testimonial-track">
-          <!-- Testimonials will be dynamically loaded here -->
-        </div>
-      </div>
-    </section>
+      <!-- 5. CONTACT -->
+      <section id="contact" class="py-16 md:py-20">
+        <div class="max-w-site mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="contact-content">
-          <!-- Contact Form -->
-          <div class="contact-form-container">
-            <form 
-              id="contact-form" 
-              class="contact-form glass-card"
-              action="https://formspree.io/f/mqaklzwn"
-              method="POST"
-              aria-label="Contact form"
-            >
-              <div class="form-header">
-                <h3>Send me a message</h3>
-                <p>I'll get back to you as soon as possible!</p>
-              </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-1.5">Get in Touch</h2>
+              <p class="text-zinc-500 dark:text-zinc-400 mb-8 text-[15px] max-w-sm">
+                Have a project in mind or want to discuss an opportunity? I'd love to hear from you.
+              </p>
 
-              <div class="form-group">
-                <label for="name" class="form-label">Full Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="form-input"
-                  placeholder="John Doe"
-                  required
-                  pattern="[A-Za-z ]{2,50}"
-                  title="Name should be between 2 and 50 characters and contain only letters"
-                  maxlength="50"
-                  aria-describedby="name-help"
-                />
-                <small id="name-help" class="form-help">Enter your full name</small>
-              </div>
-
-              <div class="form-group">
-                <label for="email" class="form-label">Email Address *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="form-input"
-                  placeholder="john@example.com"
-                  required
-                  title="Please enter a valid email address"
-                  aria-describedby="email-help"
-                />
-                <small id="email-help" class="form-help">I'll never share your email</small>
-              </div>
-
-              <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <select id="subject" name="subject" class="form-select">
-                  <option value="">Select a topic</option>
-                  <option value="freelance">Freelance Project</option>
-                  <option value="fulltime">Full-time Opportunity</option>
-                  <option value="collaboration">Collaboration</option>
-                  <option value="question">General Question</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message" class="form-label">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form-textarea"
-                  rows="6"
-                  placeholder="Tell me about your project, idea, or just say hello..."
-                  required
-                  minlength="10"
-                  maxlength="1000"
-                  aria-describedby="message-help"
-                ></textarea>
-                <small id="message-help" class="form-help">
-                  <span id="char-count">0</span>/1000 characters
-                </small>
-              </div>
-
-              <button type="submit" id="submit-button" class="btn btn-primary submit-btn">
-                <span class="btn-text">Send Message</span>
-                <span class="btn-loader hidden">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 12a9 9 0 11-6.219-8.56"/>
+              <div class="space-y-3.5 mb-10">
+                <a href="mailto:asum.nelson@gmail.com" class="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 tr">
+                  <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
                   </svg>
-                </span>
-              </button>
+                  asum.nelson@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/nelson-asumbrado-3049a2243" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 tr">
+                  <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.719H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+                <a href="https://github.com/doedoe123-boop" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 tr">
+                  <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
 
-              <div id="my-form-status" class="form-status" role="alert" aria-live="polite"></div>
-            </form>
+              <a href="assets/Nelson_Asumbrado_FullStack_Backend_Developer.pdf" download
+                 class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 tr">
+                Download Resume
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+                </svg>
+              </a>
+            </div>
+
+            <div>
+              <form id="contact-form" action="https://formspree.io/f/mqaklzwn" method="POST" class="space-y-5" aria-label="Contact form">
+
+                <div>
+                  <label for="name" class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">Name</label>
+                  <input type="text" id="name" name="name" required maxlength="50" placeholder="Your name" autocomplete="name"
+                    class="w-full px-3 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-500 tr">
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email"
+                    class="w-full px-3 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-500 tr">
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">Subject</label>
+                  <select id="subject" name="subject"
+                    class="w-full px-3 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-500 tr">
+                    <option value="">Select a topic</option>
+                    <option value="fulltime">Full-time Opportunity</option>
+                    <option value="freelance">Freelance Project</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">Message</label>
+                  <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Tell me about your project or opportunity..."
+                    class="w-full px-3 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-500 tr resize-none"></textarea>
+                  <p class="mt-1.5 text-xs text-zinc-400"><span id="char-count">0</span>/1000</p>
+                </div>
+
+                <button type="submit" id="submit-btn"
+                  class="w-full px-5 py-2.5 text-sm font-medium rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed tr">
+                  Send Message
+                </button>
+
+                <div id="form-status" class="text-sm text-center hidden" role="alert" aria-live="polite"></div>
+              </form>
+            </div>
+
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p class="footer-copyright">© <span id="year"></span> Nelson Asumbrado</p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 py-8">
+      <div class="max-w-site mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-zinc-400">&copy; <span id="year"></span> Nelson Asumbrado</p>
+        <div class="flex items-center gap-5">
+          <a href="https://github.com/doedoe123-boop" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 tr" aria-label="GitHub">
+            <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nelson-asumbrado-3049a2243" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 tr" aria-label="LinkedIn">
+            <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:asum.nelson@gmail.com" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 tr" aria-label="Email">
+            <svg class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
-    <!-- Sticky Contact Bar -->
-    <div class="sticky-contact-bar">
-      <div class="container sticky-contact-inner">
-        <span class="sticky-text">Let's work together</span>
-        <div class="sticky-links">
-          <a href="mailto:asum.nelson@gmail.com" class="sticky-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            asum.nelson@gmail.com
-          </a>
-          <a href="https://www.linkedin.com/in/nelson-asumbrado-3049a2243" target="_blank" rel="noopener noreferrer" class="sticky-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-              <rect x="2" y="9" width="4" height="12"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="https://github.com/doedoe123-boop" target="_blank" rel="noopener noreferrer" class="sticky-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-            </svg>
-            GitHub
-          </a>
-        </div>
-      </div>
-    </div>
 
+    <!-- SCRIPTS -->
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+    (function () {
+      'use strict';
+
+      // Theme Toggle
+      var html = document.documentElement;
+      var toggle = document.getElementById('theme-toggle');
+
+      if (localStorage.getItem('theme') === 'dark' ||
+          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+      }
+
+      toggle.addEventListener('click', function() {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      });
+
+      // Mobile Menu
+      var menuBtn = document.getElementById('mobile-menu-btn');
+      var mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', function() { mobileMenu.classList.toggle('hidden'); });
+      var links = mobileMenu.querySelectorAll('a');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() { mobileMenu.classList.add('hidden'); });
+      }
+
+      // Character Counter
+      var msg = document.getElementById('message');
+      var counter = document.getElementById('char-count');
+      msg.addEventListener('input', function() { counter.textContent = msg.value.length; });
+
+      // Contact Form
+      var form = document.getElementById('contact-form');
+      var submitBtn = document.getElementById('submit-btn');
+      var status = document.getElementById('form-status');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        status.classList.add('hidden');
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' },
+        }).then(function(res) {
+          status.classList.remove('hidden');
+          if (res.ok) {
+            status.textContent = 'Message sent successfully.';
+            status.className = 'text-sm text-center text-emerald-600 dark:text-emerald-400';
+            form.reset();
+            counter.textContent = '0';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.className = 'text-sm text-center text-red-600 dark:text-red-400';
+          }
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }).catch(function() {
+          status.classList.remove('hidden');
+          status.textContent = 'Something went wrong. Please try again.';
+          status.className = 'text-sm text-center text-red-600 dark:text-red-400';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        });
+      });
+
+      // Footer Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Scroll Reveal (opacity only, no motion)
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealEls = document.querySelectorAll('.reveal');
+
+      if (prefersReducedMotion) {
+        // Show everything immediately
+        for (var j = 0; j < revealEls.length; j++) {
+          revealEls[j].classList.add('visible');
+        }
+      } else if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        for (var k = 0; k < revealEls.length; k++) {
+          observer.observe(revealEls[k]);
+        }
+      } else {
+        // Fallback: show all
+        for (var l = 0; l < revealEls.length; l++) {
+          revealEls[l].classList.add('visible');
+        }
+      }
+
+    })();
     </script>
-    <script src="assets/vendor/js/utils.js"></script>
-    <script src="assets/vendor/js/data.js"></script>
-    <script src="assets/vendor/js/modal.js"></script>
-    <script src="assets/vendor/js/components.js"></script>
-    <script src="assets/vendor/js/animate.js"></script>
-    <script src="assets/vendor/js/carousel.js"></script>
-    <script src="assets/vendor/js/formAjax.js"></script>
-    <script src="assets/vendor/js/scrolldown.js"></script>
-    <script src="assets/vendor/js/theme-toggle.js"></script>
-    <script src="assets/vendor/js/code-tabs.js"></script>
-  </body>
+
+</body>
 </html>
