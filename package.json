@@ -1,0 +1,23 @@
+{
+  "name": "nelson-asumbrado-portfolio",
+  "version": "1.0.0",
+  "description": "Welcome to my personal portfolio website! This site showcases some of my projects and serves as an introduction to my work as a web developer. Feel free to explore and learn more about my skills, projects, and journey.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doedoe123-boop/portfolio.git"
+  },
+  "keywords": ["portfolio", "web-development", "full-stack"],
+  "author": "Nelson Asumbrado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doedoe123-boop/portfolio/issues"
+  },
+  "homepage": "https://github.com/doedoe123-boop/portfolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
